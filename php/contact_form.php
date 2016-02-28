@@ -10,7 +10,7 @@
 	$headers .= "From: {$name} <{$email}>" . "\r\n";
 	
 	if (!isset($subject)) {
-		$subject = "Contact form message"; // Enter your subject here
+		$subject = "Website: Contact Me"; // Enter your subject here
 	}
 		
 	$body = "";
