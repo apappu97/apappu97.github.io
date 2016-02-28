@@ -1,927 +1,1167 @@
-<!doctype html>  
-<!--[if IE 6 ]><html lang="en-us" class="ie6"> <![endif]-->
-<!--[if IE 7 ]><html lang="en-us" class="ie7"> <![endif]-->
-<!--[if IE 8 ]><html lang="en-us" class="ie8"> <![endif]-->
-<!--[if (gt IE 7)|!(IE)]><!-->
-<html lang="en-us"><!--<![endif]-->
+<!DOCTYPE html>
+<html lang="en" class="theme-color-07cb79 theme-skin-light">
 <head>
 	<meta charset="utf-8">
-	
-	<title>RS Card  - Version 1.1.1</title>
-	
-	<meta name="description" content="">
-	<meta name="author" content="Pxlabs">
-	<meta name="copyright" content="Pxlabs">
-	<meta name="generator" content="Documenter v2.0 http://rxa.li/documenter">
-	<meta name="date" content="2016-01-18T00:00:00+01:00">
-	
-	<link rel="stylesheet" href="assets/css/documenter_style.css" media="all">
-	<link rel="stylesheet" href="assets/js/google-code-prettify/prettify.css" media="screen">
-	<script src="assets/js/google-code-prettify/prettify.js"></script>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	
-	
-	<script src="assets/js/jquery.js"></script>
-	
-	<script src="assets/js/jquery.scrollTo.js"></script>
-	<script src="assets/js/jquery.easing.js"></script>
-	
-	<script>document.createElement('section');var duration='500',easing='swing';</script>
-	<script src="assets/js/script.js"></script>
-	
-	<style>
-		html{background-color:#E9E9E9;color:#383838;}
-		::-moz-selection{background:#33D685;color:#424242;}
-		::selection{background:#33D685;color:#424242;}
-		#documenter_sidebar #documenter_logo{background-image:url(assets/images/image_2.png);}
-		a{color:#33D685;}
-		.btn {
-			border-radius:3px;
-		}
-		.btn-primary {
-			  background-image: -moz-linear-gradient(top, #FFFFFF, #29AD6C);
-			  background-image: -ms-linear-gradient(top, #FFFFFF, #29AD6C);
-			  background-image: -webkit-gradient(linear, 0 0, 0 FFFFFF%, from(#BCBCBC), to(#29AD6C));
-			  background-image: -webkit-linear-gradient(top, #FFFFFF, #29AD6C);
-			  background-image: -o-linear-gradient(top, #FFFFFF, #29AD6C);
-			  background-image: linear-gradient(top, #FFFFFF, #29AD6C);
-			  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#29AD6C', GradientType=0);
-			  border-color: #29AD6C #29AD6C #bfbfbf;
-			  color:#FFFFFF;
-		}
-		.btn-primary:hover,
-		.btn-primary:active,
-		.btn-primary.active,
-		.btn-primary.disabled,
-		.btn-primary[disabled] {
-		  border-color: #FFFFFF #FFFFFF #bfbfbf;
-		  background-color: #29AD6C;
-		}
-		hr{border-top:1px solid #D4D4D4;border-bottom:1px solid #F7F7F7;}
-		#documenter_sidebar, #documenter_sidebar ul a{background-color:#BCBCBC;color:#222222;}
-		#documenter_sidebar ul a{-webkit-text-shadow:1px 1px 0px #DBDBDB;-moz-text-shadow:1px 1px 0px #DBDBDB;text-shadow:1px 1px 0px #DBDBDB;}
-		#documenter_sidebar ul{border-top:1px solid #A1A1A1;}
-		#documenter_sidebar ul a{border-top:1px solid #DBDBDB;border-bottom:1px solid #A1A1A1;color:#424242;}
-		#documenter_sidebar ul a:hover{background:#33D685;color:#424242;border-top:1px solid #33D685;}
-		#documenter_sidebar ul a.current{background:#33D685;color:#424242;border-top:1px solid #33D685;}
-		#documenter_copyright{display:block !important;visibility:visible !important;}
-	</style>
-	
+	<title>RScard</title>
+
+	<!-- Favicon -->
+	<link rel="shortcut icon" type="image/ico" href="img/favicon.png"/>
+
+	<!-- Google Fonts -->
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Fredoka+One">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic">
+
+	<!-- Icon Fonts -->
+	<link rel="stylesheet" type="text/css" href="fonts/map-icons/css/map-icons.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/icomoon/style.css">
+
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="js/plugins/jquery.bxslider/jquery.bxslider.css">
+	<link rel="stylesheet" type="text/css" href="js/plugins/jquery.customscroll/jquery.mCustomScrollbar.min.css">
+	<link rel="stylesheet" type="text/css" href="js/plugins/jquery.mediaelement/mediaelementplayer.min.css">
+	<link rel="stylesheet" type="text/css" href="js/plugins/jquery.fancybox/jquery.fancybox.css">
+	<link rel="stylesheet" type="text/css" href="js/plugins/jquery.owlcarousel/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="js/plugins/jquery.owlcarousel/owl.theme.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="colors/green.css">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<!-- Modernizer for detect what features the user’s browser has to offer -->
+	<script type="text/javascript" src="js/libs/modernizr.js"></script>
 </head>
-<body class="documenter-project-rs-card-">
-	<div id="documenter_sidebar">
-		<a href="#documenter_cover" id="documenter_logo"></a>
-		<ul id="documenter_nav">
-			<li><a class="current" href="#documenter_cover">Start</a></li>
-				
-			<li><a href="#features" title="Features">Features</a></li>
-			<li><a href="#html_structure" title="HTML Structure">HTML Structure</a></li>
-			<li><a href="#css_files_and_structure" title="CSS Files and Structure">CSS Files and Structure</a></li>
-			<li><a href="#theme_fonts" title="Theme Fonts">Theme Fonts</a></li>
-			<li><a href="#theme_colors" title="Theme Colors">Theme Colors</a></li>
-			<li><a href="#javascript" title="JavaScript">JavaScript</a></li>
-			<li><a href="#wordpress_ready" title="Wordpress Ready">Wordpress Ready</a></li>
-			<li><a href="#contact_form" title="Contact Form">Contact Form</a></li>
-			<li><a href="#portfolio" title="Portfolio">Portfolio</a></li>
-			<li><a href="#calendar" title="Calendar">Calendar</a></li>
-			<li><a href="#04_page" title="404 page">404 page</a></li>
-			<li><a href="#sources_and_credits" title="Sources and Credits">Sources and Credits</a></li>
-			<li><a href="#how_to_rate" title="How to rate">How to rate</a></li>
 
-		</ul>
-		<div id="documenter_copyright">Copyright Pxlabs 2016<br>
-		made with the <a href="http://rxa.li/documenter">Documenter v2.0</a> 
-		</div>
-	</div>
-	<div id="documenter_content">
-	<section id="documenter_cover">
-	<h1>RS Card </h1>
-	<h2>Version 1.1.1</h2>
-	<div id="documenter_buttons">
+<body class="home header-has-img loading">
+
+    <div class="mobile-nav">
+        <button class="btn-mobile mobile-nav-close"><i class="icon icon-close"></i></button>
 		
-	</div>
-	<hr>
-	<ul>
-	<li>created: 11/17/2015</li>
-	<li>latest update: 01/18/2016</li>
-	<li>by: Pxlabs</li>
-	<li><a href=""></a></li>
-	<li>email: <a href="mailto:&#112;&#120;&#108;&#97;&#98;&#115;&#99;&#111;&#109;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;">&#112;&#120;&#108;&#97;&#98;&#115;&#99;&#111;&#109;&#64;&#103;&#109;&#97;&#105;&#108;&#46;&#99;&#111;&#109;</a></li>
-	</ul>
-	<p>Thank you for purchasing our HTML Template!  We hope that you will find all  answers to your questions in this Documentation regarding RScard HTML Template. However, if you still need support, please, go to Themeforest profile and <a href="http://themeforest.net/user/px-lab#contact" target="_blank">use the form</a> to send a message. 
-We will answer every doubt within our reach. <br><br>
+        <div class="mobile-nav-inner">
+            <nav id="mobile-nav" class="nav">
+				<ul class="clearfix">
+					<li><a href="#about">About</a></li>
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#portfolio">Portfolio</a> </li>
+					<li><a href="#experience">Experience</a></li>
+					<li><a href="#references">References</a></li>
+					<li>
+						<a href="category.html">Blog</a>
+						<ul>
+							<li><a href="single-image.html">Image Post</a></li>
+							<li><a href="single-slider.html">Slider Post</a></li>
+							<li><a href="single-video.html">Video Post</a></li>
+							<li><a href="single-audio.html">Audio Post</a></li>
+							<li><a href="single-vimeo.html">Vimeo Post</a></li>
+							<li><a href="single-youtube.html">Youtube Post</a></li>
+							<li><a href="single-dailymotion.html">Dailymotion Post</a></li>
+							<li><a href="single.html">Without Media Post</a></li>
+							<li><a href="typography.html">Typography Page</a></li>
+							<li><a href="404.html">404 Page</a></li>
+						</ul>
+					</li>
+					<li><a href="#calendar">Calendar <span></span></a></li>
+					<li><a href="#contact">Contact <span></span></a></li>
+				</ul>
+			</nav>
+        </div>
+    </div><!-- .mobile-nav -->
 
-We will appreciate, if you find  a few seconds and rate our template. Many thanks! 
-<br><a href="#how_to_rate" > Don't know how to rate?</a></p>
-	</section>
+    <div class="sidebar sidebar-fixed">
+        <button class="btn-sidebar btn-sidebar-close"> <i class="icon icon-close"></i></button>
+
+        <div class="widget-area">
+            <aside class="widget widget-profile">
+                <div class="profile-photo">
+                    <img src="img/uploads/rs-photo-v2.jpg" alt="Robert Smith"/>
+                </div>
+                <div class="profile-info">
+                    <h2 class="profile-title">Robert Smith</h2>
+                    <h3 class="profile-position">Developer and businessman</h3>
+                </div>
+            </aside><!-- .widget-profile -->
+
+            <aside class="widget widget_search">
+                <h2 class="widget-title">Search</h2>
+                <form class="search-form">
+                    <label class="ripple">
+                        <span class="screen-reader-text">Search for:</span>
+                        <input class="search-field" type="search" placeholder="Search">
+                    </label>
+                    <input type="submit" class="search-submit" value="Search">
+                </form>
+            </aside><!-- .widget_search -->
+
+            <aside class="widget widget_contact">
+                <h2 class="widget-title">Contact Me</h2>
+				<form class="contactForm" action="php/contact_form.php" method="post">
+					<div class="input-field">
+						<input class="contact-name" type="text" name="name"/>
+						<span class="line"></span>
+						<label>Name</label>
+					</div>
+
+					<div class="input-field">
+						<input class="contact-email" type="email" name="email"/>
+						<span class="line"></span>
+						<label>Email</label>
+					</div>
+
+					<div class="input-field">
+						<input class="contact-subject" type="text" name="subject"/>
+						<span class="line"></span>
+						<label>Subject</label>
+					</div>
+
+					<div class="input-field">
+						<textarea class="contact-message" rows="4" name="message"></textarea>
+						<span class="line"></span>
+						<label>Message</label>
+					</div>
+
+					<span class="btn-outer btn-primary-outer ripple">
+						<input class="contact-submit btn btn-lg btn-primary" type="submit" value="Send"/>
+					</span>
+					
+					<div class="contact-response"></div>
+				</form>
+            </aside><!-- .widget_contact -->
+
+            <aside class="widget widget-popuplar-posts">
+                <h2 class="widget-title">Popular posts</h2>
+                <ul>
+                    <li>
+                        <div class="post-media"><a href=""><img src="img/uploads/thumb-78x56-1.jpg" alt=""/></a></div>
+                        <h3 class="post-title"><a href="">Standard Post Format With Featured Image</a></h3>
+                        <div class="post-info"><a href=""><i class="icon icon-comments"></i>56 comments</a></div>
+                    </li>
+                    <li>
+                        <div class="post-media"><a href=""><img src="img/uploads/thumb-78x56-2.jpg" alt=""/></a></div>
+                        <h3 class="post-title"><a href="">Standard Post Format With Featured Image</a></h3>
+                        <div class="post-info"><a href=""><i class="icon icon-comments"></i>56 comments</a></div>
+                    </li>
+                    <li>
+                        <div class="post-media"><a href=""><img src="img/uploads/thumb-78x56-3.jpg" alt=""/></a></div>
+                        <h3 class="post-title"><a href="">Standard Post Format With Featured Image</a></h3>
+                        <div class="post-info"><a href=""><i class="icon icon-comments"></i>56 comments</a></div>
+                    </li>
+                </ul>
+            </aside><!-- .widget-popuplar-posts -->
+
+            <aside class="widget widget_tag_cloud">
+                <h2 class="widget-title">Tag Cloud</h2>
+                <div class="tagcloud">
+                    <a href="" title="1 topic">Business</a>
+                    <a href="" title="9 topics">City</a>
+                    <a href="" title="10 topics">Creative</a>
+                    <a href="" title="6 topics">Fashion</a>
+                    <a href="" title="2 topics">Music</a>
+                    <a href="" title="5 topics">News</a>
+                    <a href="" title="9 topics">Peoples</a>
+                </div>
+            </aside><!-- .widget_tag_cloud -->
+
+            <aside class="widget widget-recent-posts">
+                <h2 class="widget-title">Recent posts</h2>
+                <ul>
+                    <li>
+                        <div class="post-tag">
+                            <a href="">#Photo</a>
+                            <a href="">#Architect</a>
+                        </div>
+                        <h3 class="post-title"><a href="">Standard Post Format With Featured Image</a></h3>
+                        <div class="post-info"><a href=""><i class="icon icon-comments"></i>56 comments</a></div>
+                    </li>
+                    <li>
+                        <div class="post-tag">
+                            <a href="">#Photo</a>
+                            <a href="">#Architect</a>
+                        </div>
+                        <h3 class="post-title"><a href="">Standard Post Format With Featured Image</a></h3>
+                        <div class="post-info"><a href=""><i class="icon icon-comments"></i>56 comments</a></div>
+                    </li>
+                    <li>
+                        <div class="post-tag">
+                            <a href="">#Photo</a>
+                            <a href="">#Architect</a>
+                        </div>
+                        <h3 class="post-title"><a href="">Standard Post Format With Featured Image</a></h3>
+                        <div class="post-info"><a href=""><i class="icon icon-comments"></i>56 comments</a></div>
+                    </li>
+                </ul>
+            </aside><!-- .widget-recent-posts -->
+
+            <aside class="widget widget_categories">
+                <h2 class="widget-title">Categories</h2>
+                <ul>
+                    <li><a href="" title="Architecture Category Posts">Architecture</a> (9)</li>
+                    <li><a href="" title="Business Category Posts">Business</a> (16)</li>
+                    <li><a href="" title="Creative Category Posts">Creative</a> (18)</li>
+                    <li><a href="" title="Design Category Posts">Design</a> (10)</li>
+                    <li><a href="" title="Development Category Posts">Development</a> (14)</li>
+                    <li><a href="" title="Education Category Posts">Education</a> (9)</li>
+                </ul>
+            </aside><!-- .widget_categories -->
+        </div><!-- .widget-area -->
+    </div><!-- .sidebar -->
+
+    <div class="wrapper">
+        <header class="header">
+            <div class="head-bg" style="background-image: url('img/uploads/rs-cover.jpg')"></div>
+
+            <div class="head-bar">
+                <div class="head-bar-inner">
+                    <div class="row">
+                        <div class="col-sm-3 col-xs-6">                            
+                            <a class="logo" href="index.html"><span>RS</span>card</a>
+							<!-- <a class="head-logo" href=""><img src="img/rs-logo.png" alt="RScard"/></a> -->
+                        </div>
+
+                        <div class="col-sm-9 col-xs-6">
+                            <div class="nav-wrap">
+                                <nav id="nav" class="nav">
+									<ul class="clearfix">
+										<li><a href="#about">About</a></li>
+										<li><a href="#skills">Skills</a></li>
+										<li><a href="#portfolio">Portfolio</a> </li>
+										<li><a href="#experience">Experience</a></li>
+										<li><a href="#references">References</a></li>
+										<li>
+											<a href="category.html">Blog</a>
+											<ul>
+												<li><a href="single-image.html">Image Post</a></li>
+												<li><a href="single-slider.html">Slider Post</a></li>
+												<li><a href="single-video.html">Video Post</a></li>
+												<li><a href="single-audio.html">Audio Post</a></li>
+												<li><a href="single-vimeo.html">Vimeo Post</a></li>
+												<li><a href="single-youtube.html">Youtube Post</a></li>
+												<li><a href="single-dailymotion.html">Dailymotion Post</a></li>
+												<li><a href="single.html">Without Media Post</a></li>
+												<li><a href="typography.html">Typography Page</a></li>
+												<li><a href="404.html">404 Page</a></li>
+											</ul>
+										</li>
+										<li><a href="#calendar">Calendar <span></span></a></li>
+										<li><a href="#contact">Contact <span></span></a></li>
+									</ul>
+								</nav>
+
+                                <button class="btn-mobile btn-mobile-nav">Menu</button>
+                                <button class="btn-sidebar btn-sidebar-open"><i class="icon icon-menu"></i></button>
+                            </div><!-- .nav-wrap -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header><!-- .header -->
+
+        <div class="content">
+            <div class="container">
+
+			<!-- START: PAGE CONTENT -->
+				<section id="about" class="section section-about">
+					<div class="animate-up">
+						<div class="section-box">
+							<div class="profile">
+								<div class="row">
+									<div class="col-xs-5">
+										<div class="profile-photo"><img src="img/uploads/rs-photo-v1.jpg" alt="Robert Smith"/></div>
+									</div>
+									<div class="col-xs-7">
+										<div class="profile-info">
+											<div class="profile-preword"><span>Hello</span></div>
+											<h1 class="profile-title"><span>I'm</span> Robert Smith</h1>
+											<h2 class="profile-position">Developer and businessman</h2></div>
+                                            <ul class="profile-list">
+                                                <li class="clearfix">
+                                                    <strong class="title">Age</strong>
+                                                    <span class="cont">29</span>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <strong class="title">Address</strong>
+                                                    <span class="cont">24058, Belgium, Brussels, Liutte 27, BE</span>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <strong class="title">E-mail</strong>
+                                                    <span class="cont"><a href="mailto:robertsmith@company.com">robertsmith@company.com</a></span>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <strong class="title">Phone</strong>
+                                                    <span class="cont"><a href="tel:+12562548456">+1 256 254 84 56</a></span>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <strong class="title">Freelance</strong>
+                                                    <span class="cont">till April 15, 2016</span>
+                                                </li>
+                                                <li class="clearfix">
+                                                    <strong class="title"><span class="button">On Vacation</span></strong>
+                                                    <span class="cont"><i class="icon icon-calendar"></i>till March 25, 2016</span>
+                                                </li>
+                                            </ul>
+									</div>
+								</div>
+							</div>
+							<div class="profile-social">
+								<ul class="social">
+									<li><a class="ripple-centered" href="https://www.facebook.com" target="_blank"><i class="icon icon-facebook"></i></a></li>
+									<li><a class="ripple-centered" href="https://twitter.com" target="_blank"><i class="icon icon-twitter"></i></a></li>
+									<li><a class="ripple-centered" href="https://www.linkedin.com" target="_blank"><i class="icon icon-linkedin"></i></a></li>
+									<li><a class="ripple-centered" href="https://plus.google.com" target="_blank"><i class="icon icon-google-plus"></i></a></li>
+									<li><a class="ripple-centered" href="https://dribbble.com" target="_blank"><i class="icon icon-dribbble"></i></a></li>
+									<li><a class="ripple-centered" href="https://www.instagram.com" target="_blank"><i class="icon icon-instagram"></i></a></li>
+								</ul>
+							</div>
+						</div>
+
+                        <div class="section-txt-btn">
+                            <p><a class="btn btn-lg btn-border ripple" target="_blank" href="http://dev.novembit.com/rs_card/wp-content/uploads/2015/11/test-1.pdf">Download Resume</a></p>
+                            <p>Hello! I’m Robert Smith. Senior Web Developer specializing in front end development. Experienced with all stages of the development cycle for dynamic web projects. Well-versed in numerous programming languages including JavaScript, SQL, and C. Stng background in project management and customer relations.</p>
+                        </div>
+					</div>	
+				</section><!-- #about -->
+                										
+				<section id="skills" class="section section-skills">
+					<div class="animate-up">
+						<h2 class="section-title">Proffessional  Skills</h2>
+						<div class="section-box">
+							<div class="row">							
+								<div class="col-sm-6">
+									<div class="progress-bar">
+										<div class="bar-data">
+											<span class="bar-title">Wordpress</span>
+											<span class="bar-value">51%</span>
+										</div>
+										<div class="bar-line">
+											<span class="bar-fill" data-width="51%"></span>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-sm-6">
+									<div class="progress-bar">
+										<div class="bar-data">
+											<span class="bar-title">Photoshop</span>
+											<span class="bar-value">67%</span>
+										</div>
+										<div class="bar-line">
+											<span class="bar-fill" data-width="67%"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">							
+								<div class="col-sm-6">
+									<div class="progress-bar">
+										<div class="bar-data">
+											<span class="bar-title">HTML & CSS</span>
+											<span class="bar-value">79%</span>
+										</div>
+										<div class="bar-line">
+											<span class="bar-fill" data-width="79%"></span>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-sm-6">
+									<div class="progress-bar">
+										<div class="bar-data">
+											<span class="bar-title">Javascript</span>
+											<span class="bar-value">69%</span>
+										</div>
+										<div class="bar-line">
+											<span class="bar-fill" data-width="67%"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="row">							
+								<div class="col-sm-6">
+									<div class="progress-bar">
+										<div class="bar-data">
+											<span class="bar-title">PHP & MySQL</span>
+											<span class="bar-value">54%</span>
+										</div>
+										<div class="bar-line">
+											<span class="bar-fill" data-width="54%"></span>
+										</div>
+									</div>
+								</div>
+								
+								<div class="col-sm-6">
+									<div class="progress-bar">
+										<div class="bar-data">
+											<span class="bar-title">Drupal</span>
+											<span class="bar-value">80%</span>
+										</div>
+										<div class="bar-line">
+											<span class="bar-fill" data-width="80%"></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</section><!-- #skills -->
+                
+				<section id="portfolio" class="section section-portfolio">
+					<div class="animate-up">
+						<h2 class="section-title">Portfolio</h2>
+
+						<div class="filter">
+							<div class="filter-inner">
+								<div class="filter-btn-group">
+									<button data-filter="*">All</button>
+									<button data-filter=".photography">Photography</button>
+									<button data-filter=".nature">Nature</button>
+								</div>
+								<div class="filter-bar">
+									<span class="filter-bar-line"></span>
+								</div>
+							</div>
+						</div>
+
+						<div class="grid">
+							<div class="grid-sizer"></div>
+							
+							<div class="grid-item size22 photography">
+								<div class="grid-box">
+									<figure class="portfolio-figure">
+										<img src="img/uploads/portfolio/portfolio-thumb-05-610x600.jpg" alt=""/>
+										<figcaption class="portfolio-caption">
+											<div class="portfolio-caption-inner">
+												<h3 class="portfolio-title">Street Photography</h3>
+												<h4 class="portfolio-cat">Photography</h4>
+
+												<div class="btn-group">
+													<a class="btn-link" href="http://bit.ly/1YtB8he" target="_blank"><i class="icon icon-link"></i></a>
+													<a class="portfolioFancybox btn-zoom" data-fancybox-group="portfolioFancybox1" href="#portfolio1-inline1"><i class="icon icon-eye"></i></a>
+													<a class="portfolioFancybox hidden" data-fancybox-group="portfolioFancybox1" href="#portfolio1-inline2"></a>
+													<a class="portfolioFancybox hidden" data-fancybox-group="portfolioFancybox1" href="#portfolio1-inline3"></a>
+												</div>
+											</div>
+										</figcaption>
+									</figure>
+
+									<!-- Start: Portfolio Inline Boxes -->
+									<div id="portfolio1-inline1" class="fancybox-inline-box">
+                                        <div class="inline-embed" data-embed-type="image" data-embed-url="img/uploads/portfolio/portfolio-thumb-05-large.jpg"></div>
+										<div class="inline-cont">
+											<h2 class="inline-title">Street photography is photography that features the chance encounters and random accidents within public places.</h2>
+											<div class="inline-text">
+												<p>Street photography does not necessitate the presence of a street or even the urban environment. Though people usually feature directly, street photography might be absent of people and can be an object or environment where the image projects a decidedly human character in facsimile or aesthetic.</p>
+											</div>
+										</div>
+									</div>																
+									
+									<div id="portfolio1-inline2" class="fancybox-inline-box">
+                                        <div class="inline-embed" data-embed-type="image" data-embed-url="img/uploads/portfolio/portfolio-thumb-01-large.jpg"></div>
+										<div class="inline-cont">
+											<div class="inline-text">
+												<h2 class="inline-title">Framing and timing</h2>
+												<p>Framing and timing can be key aspects of the craft with the aim of some street photography being to create images at a decisive or poignant moment. Street photography can focus on emotions displayed, thereby also recording people's history from an emotional point of view.</p>
+											</div>
+										</div>
+									</div>
+									
+									<div id="portfolio1-inline3" class="fancybox-inline-box">
+                                        <div class="inline-embed" data-embed-type="iframe" data-embed-url="https://player.vimeo.com/video/118244244"></div>
+										<div class="inline-cont">
+											<div class="inline-text">
+												<h2 class="inline-title">A Look Into Documenting Street Fashion Photography</h2>
+												<p>HB Nam is an internationally known street fashion photographer. In this Leica Camera Portrait, Nam explains how he started in photography and what photography means to him. For Nam, it's about documenting what's around him and the concentration required to achieve a good shot.</p>
+											</div>
+										</div>
+									</div>
+									<!-- End: Portfolio Inline Boxes -->
+								</div>
+							</div><!-- .grid-item -->			
+						
+							<div class="grid-item size11 bridge">
+								<div class="grid-box">
+									<figure class="portfolio-figure">
+										<img src="img/uploads/portfolio/portfolio-thumb-11-289x281.jpg" alt=""/>
+										<figcaption class="portfolio-caption">
+											<div class="portfolio-caption-inner">
+												<h3 class="portfolio-title">Suspension Bridge</h3>
+												<h4 class="portfolio-cat">Bridge</h4>
+
+												<div class="btn-group">
+													<a class="btn-link" href="http://bit.ly/1YtB8he" target="_blank"><i class="icon icon-link"></i></a>
+													<a class="portfolioFancybox btn-zoom" data-fancybox-group="portfolioFancybox2" href="#portfolio2-inline1"><i class="icon icon-eye"></i></a>
+												</div>
+											</div>
+										</figcaption>
+									</figure>
+									
+									<!-- Start: Portfolio Inline Boxes -->
+									<div id="portfolio2-inline1" class="fancybox-inline-box">
+										<div class="inline-cont">
+											<h2 class="inline-title">Suspension Bridges - Design Technology</h2>
+											<div class="inline-text">
+												<p>Suspension bridges in their simplest form were originally made from rope and wood.
+												Modern suspension bridges use a box section roadway supported by high tensile strength cables. 
+												In the early nineteenth century, suspension bridges used iron chains for cables. The high tensile cables used in most modern suspension 
+												bridges were introduced in the late nineteenth century.<br/>
+												Today, the cables are made of thousands of individual steel wires bound tightly together. Steel, which is very strong under tension, is 
+												an ideal material for cables; a single steel wire, only 0.1 inch thick, can support over half a ton without breaking.</p>
+												<p>Light, and strong, suspension bridges can span distances from 2,000 to 7,000 feet far longer than any other kind of bridge. They are 
+												ideal for covering busy waterways.</p>
+												<p>With any bridge project the choice of materials and form usually comes down to cost.
+												Suspension bridges tend to be the most expensive to build. A suspension bridge suspends the roadway from huge main cables, which extend 
+												from one end of the bridge to the other. These cables rest on top of high towers and have to be securely anchored into the bank at either 
+												end of the bridge. The towers enable the main cables to be draped over long distances. Most of the weight or load of the bridge is 
+												transferred by the cables to the anchorage systems. These are imbedded in either solid rock or huge concrete blocks. Inside the anchorages, 
+												the cables are spread over a large area to evenly distribute the load and to prevent the cables from breaking free.</p>
+												<p>The Arthashastra of Kautilya mentions the construction of dams and bridges.A Mauryan bridge near Girnar was surveyed by James Princep. 
+												The bridge was swept away during a flood, and later repaired by Puspagupta, the chief architect of emperor Chandragupta I. The bridge 
+												also fell under the care of the Yavana Tushaspa, and the Satrap Rudra Daman. The use of stronger bridges using plaited bamboo and iron 
+												chain was visible in India by about the 4th century. A number of bridges, both for military and commercial purposes, were constructed by 
+												the Mughal administration in India.</p>
+											</div>
+										</div>
+									</div>
+									<!-- End: Portfolio Inline Boxes -->
+								</div>
+							</div><!-- .grid-item -->
+							
+							<div class="grid-item size11 nature photography">
+								<div class="grid-box">
+									<figure class="portfolio-figure">
+										<img src="img/uploads/portfolio/portfolio-thumb-08-289x281.jpg" alt=""/>
+										<figcaption class="portfolio-caption">
+											<div class="portfolio-caption-inner">
+												<h3 class="portfolio-title">Rocky Mountains</h3>
+												<h4 class="portfolio-cat">Nature, Photography</h4>
+
+												<div class="btn-group">
+													<a class="btn-link" href="http://bit.ly/1YtB8he" target="_blank"><i class="icon icon-link"></i></a>
+													<a class="portfolioFancybox btn-zoom" data-fancybox-group="portfolioFancybox3" href="#portfolio3-inline1"><i class="icon icon-eye"></i></a>
+													<a class="portfolioFancybox hidden" data-fancybox-group="portfolioFancybox3" href="#portfolio3-inline2"></a>
+													<a class="portfolioFancybox hidden" data-fancybox-group="portfolioFancybox3" href="#portfolio3-inline3"></a>
+												</div>
+											</div>
+										</figcaption>
+									</figure>
+
+									<!-- Start: Portfolio Inline Boxes -->
+									<div id="portfolio3-inline1" class="fancybox-inline-box">
+                                        <div class="inline-embed" data-embed-type="image" data-embed-url="img/uploads/portfolio/portfolio-thumb-08-large.jpg"></div>
+									</div>
+
+									<div id="portfolio3-inline2" class="fancybox-inline-box">
+                                        <div class="inline-embed" data-embed-type="image" data-embed-url="img/uploads/portfolio/portfolio-thumb-04-large.jpg"></div>
+									</div>
+									
+									<div id="portfolio3-inline3" class="fancybox-inline-box">
+                                        <div class="inline-embed" data-embed-type="image" data-embed-url="img/uploads/portfolio/portfolio-thumb-02-large.jpg"></div>
+									</div>
+									<!-- End: Portfolio Inline Boxes -->
+								</div>
+							</div><!-- .grid-item -->
+						
+						</div>
+
+						<div class="grid-more">
+							<span class="ajax-loader"></span>
+							<button class="btn btn-border ripple"><i class="icon icon-add"></i></button>
+						</div>
+					</div>	
+				</section><!-- #portfolio -->
+											
+				<section id="experience" class="section section-experience">
+					<div class="animate-up">
+						<h2 class="section-title">Work Experience</h2>
+
+						<div class="timeline">
+							<div class="timeline-bar"></div>
+							<div class="timeline-inner clearfix">
+                                <div class="timeline-box timeline-box-left">
+                                    <span class="dot"></span>
+                                    <div class="timeline-box-inner animate-right">
+                                        <span class="arrow"></span>
+                                        <div class="date">2010 - up to present</div>
+                                        <h3>Webmaster / Web Developer</h3>
+                                        <h4>exampleofsite.com</h4>
+                                        <p>Developed, managed, operated and promoted an Internet business.Handled customer support issues.Planned and managed business finances.</p>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-box timeline-box-right">
+                                    <span class="dot"></span>
+                                    <div class="timeline-box-inner animate-left">
+                                        <span class="arrow"></span>
+                                        <div class="date">2007 - 2010</div>
+                                        <h3>Systems Analyst / Web Developer</h3>
+                                        <h4>exampleofsite.com</h4>
+                                        <p>Developed, maintained and promoted more than ten websites.Implemented and examined web software such as traffic analyzers, banner programs and onsite search engines.Exercised creative judgment in researching and recruiting promotional affiliates. Administrated the office network. Migrated hosting servers with detailed plans including simulating, testing and setting up complex configurations.</p>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-box timeline-box-left">
+                                    <span class="dot"></span>
+                                    <div class="timeline-box-inner animate-right">
+                                        <span class="arrow"></span>
+                                        <div class="date">2003 - 2006</div>
+                                        <h3>Systems Analyst / Web Developer / Designer</h3>
+                                        <h4>exampleofsite.com</h4>
+                                        <p>Rebuilt and enhanced existing ASP B2C site with ASP.NET 2.0 Framework and tools. Technology consists of ASP.NET 2.0 (C#), IIS, Microsoft SQL Server 2005, Stored Procedures & PayPal Instant Payment Notification.</p>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-box timeline-box-right">
+                                    <span class="dot"></span>
+                                    <div class="timeline-box-inner animate-left">
+                                        <span class="arrow"></span>
+                                        <div class="date">Jul 2001- Nov 2003</div>
+                                        <h3>Trainee Web Developer</h3>
+                                        <h4>SEO Company - Coventry</h4>
+                                        <p>Worked as part of a multi-disciplinary team, carrying out ad-hoc tasks as requested by the IT Manager. Had a specific brief to ensure the websites build for customer’s precisely matched their requirements.</p>
+                                    </div>
+                                </div>
+
+								<div class="timeline-box timeline-box-left">
+									<span class="dot"></span>
+									<div class="timeline-box-inner animate-right">
+										<span class="arrow"></span>
+										<div class="date">1998 - 2001</div>
+										<h3>Web Developer</h3>
+										<h4>Web Design Company - Birmingham</h4>
+										<p>Present Responsible for working on a range of projects, designing appealing websites and interacting on a daily basis with graphic designers, back-end developers and marketers.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</section><!-- #experience -->
+				
+				<section id="education" class="section section-education">
+					<div class="animate-up">
+						<h2 class="section-title">Education</h2>
+						<div class="timeline">
+							<div class="timeline-bar"></div>
+							<div class="timeline-inner clearfix">
+
+                                <div class="timeline-box timeline-box-compact timeline-box-left">
+                                    <span class="dot"></span>
+
+                                    <div class="timeline-box-inner animate-right">
+                                        <span class="arrow"></span>
+                                        <div class="date"><span>1996 - 1998</span></div>
+                                        <h3>Emphasis on Software Engineering and Object Oriented Programming</h3>
+                                        <h4>George Washington University</h4>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-box timeline-box-compact timeline-box-right">
+                                    <span class="dot"></span>
+
+                                    <div class="timeline-box-inner animate-left">
+                                        <span class="arrow"></span>
+                                        <div class="date"><span>1994 - 1996</span></div>
+                                        <h3>B.S. Computer Science</h3>
+                                        <h4>California State University</h4>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-box timeline-box-compact timeline-box-left">
+                                    <span class="dot"></span>
+
+                                    <div class="timeline-box-inner animate-right">
+                                        <span class="arrow"></span>
+                                        <div class="date"><span>1989 - 1994</span></div>
+                                        <h3>Bachelor of Arts in English Language and English Literature</h3>
+                                        <h4>Sogang University</h4>
+                                    </div>
+                                </div>
+
+                                <div class="timeline-box timeline-box-compact timeline-box-right">
+                                    <span class="dot"></span>
+
+                                    <div class="timeline-box-inner animate-left">
+                                        <span class="arrow"></span>
+                                        <div class="date"><span>1987 - 1989</span></div>
+                                        <h3>General Education / Computer Science</h3>
+                                        <h4>Los Angeles Pierce College</h4>
+                                    </div>
+                                </div>
+
+								<div class="timeline-box timeline-box-compact timeline-box-left">
+									<span class="dot"></span>
+
+									<div class="timeline-box-inner animate-right">
+										<span class="arrow"></span>
+										<div class="date"><span>1985 - 1987</span></div>
+										<h3>Diploma in Web Design</h3>
+										<h4>Coventry North College</h4>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</section><!-- #education -->
+				
+				<section id="clients" class="section section-clients">
+					<div class="animate-up">
+                        <div class="clients-carousel">
+                            <div class="client-logo">
+                                <a href="http://market.envato.com" target="_blank"><img src="img/uploads/logos/logo-envato.png" title="envato" alt="envato"/></a>
+                            </div>
+
+                            <div class="client-logo">
+                                <img src="img/uploads/logos/logo-angularjs.png" title="angular js" alt="angular js"/>
+                            </div>
+
+                            <div class="client-logo">
+                                <a href="https://www.omniref.com/ruby/gems/teaspoon/0.7.9" target="_blank"><img src="img/uploads/logos/logo-teaspoon.png" title="teaspoon" alt="teaspoon"/></a>
+                            </div>
+
+                            <div class="client-logo">
+                                <a href="https://wordpress.com" target="_blank"><img src="img/uploads/logos/logo-wordpress.png" title="wordpress" alt="wordpress"/></a>
+                            </div>
+
+                            <div class="client-logo">
+                                <a href="https://evernote.com" target="_blank"><img src="img/uploads/logos/logo-evernote.png" title="evernote" alt="evernote"/></a>
+                            </div>
+
+                            <div class="client-logo">
+                                <a href="http://compass-style.org" target="_blank"><img src="img/uploads/logos/logo-compass.png" title="compass" alt="compass"/></a>
+                            </div>
+
+                            <div class="client-logo">
+                                <a href="http://getbootstrap.com" target="_blank"><img src="img/uploads/logos/logo-bootstrap.png" title="bootstrap" alt="bootstrap"/></a>
+                            </div>
+
+                            <div class="client-logo">
+                                <a href="http://jasmine.github.io" target="_blank"><img src="img/uploads/logos/logo-jasmine.png" title="jasmine" alt="jasmine"/></a>
+                            </div>
+
+                            <div class="client-logo">
+                                <a href="https://jquery.com" target="_blank"><img src="img/uploads/logos/logo-jquery.png" title="jquery" alt="jquery"/></a>
+                            </div>
+						</div>
+					</div>
+				</section><!-- #clients -->
+								
+				<section id="references" class="section section-references">
+					<div class="animate-up">
+						<h2 class="section-title">References</h2>
+						<div class="section-box">
+							<ul class="ref-slider">
+								<li>
+									<div class="ref-box">
+										<div class="person-speech">
+											<p>I confirm that I have dealt with New Company Ltd since 1998. Their work has been a major factor in our 
+											website's success, helping it to become one of the most visited resources of its kind on the Internet.</p>
+										</div>
+										<div class="person-info clearfix">
+											<img class="person-img" src="img/uploads/rs-avatar-60x60.jpg" alt="Headshot">
+											<div class="person-name-title">
+												<span class="person-name">Alexander Jokovich</span>
+												<span class="person-title">Modern LLC , HR</span>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="ref-box">
+										<div class="person-speech">
+											<p>I confirm that New Company Ltd has been a customer of ours since 1998, during which time they have always made payments reliably, 
+											in full and on time.</p>
+										</div>
+										<div class="person-info clearfix">
+											<img class="person-img" src="img/uploads/rs-avatar-60x60.jpg" alt="Headshot">
+											<div class="person-name-title">
+												<span class="person-name">Alexander Jokovich</span>
+												<span class="person-title">Modern LLC , HR</span>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="ref-box">
+										<div class="person-speech">
+											<p>I have known Robert Smith for 10 years as web developer. I can confirm that he is a man of great integrity, is extremely dedicated 
+											to his family and work, and is entirely peace-loving.</p>
+										</div>
+										<div class="person-info clearfix">
+											<img class="person-img" src="img/uploads/rs-avatar-60x60.jpg" alt="Headshot">
+											<div class="person-name-title">
+												<span class="person-name">Alexander Jokovich</span>
+												<span class="person-title">Modern LLC , HR</span>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<div class="ref-slider-nav">
+								<span id="ref-slider-prev" class="slider-prev"></span>
+								<span id="ref-slider-next" class="slider-next"></span>
+							</div>
+						</div>
+					</div>	
+				</section><!-- #references -->				
+				
+				<section id="prices" class="section section-prices">
+                    <div class="animate-up">
+                        <h2 class="section-title">Price List</h2>
+
+                        <div class="row price-list">
+                            <div class="col-sm-4">
+                                <div class="price-box">
+                                    <div class="price-box-top">
+                                        <span>$16</span><small>/mo</small>
+                                    </div>
+                                    <div class="price-box-content">
+                                        <h3>Basic</h3>
+                                        <ul>
+                                            <li>Manage tasks</li>
+                                            <li>Discussions in tasks</li>
+                                            <li>File sharing <span class="new">new</span></li>
+                                            <li><del>Real-time Activity Stream</del></li>
+                                            <li><del>Spreadsheet View</del></li>
+                                            <li><del>iPhone and Android apps</del></li>
+                                            <li><del>Advanced email integration</del></li>
+                                            <li><del>Basic Integrations</del></li>
+                                        </ul>
+                                        <div class="btn-wrap">
+                                            <a class="btn btn-lg btn-border" href="">Buy Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <div class="price-box box-primary">
+                                    <div class="price-box-top">
+                                        <span>$50</span><small>/mo</small>
+                                    </div>
+                                    <div class="price-box-content">
+                                        <h3>Professional</h3>
+                                        <ul>
+                                            <li>Manage tasks</li>
+                                            <li>Discussions in tasks</li>
+                                            <li>File sharing <span class="new">new</span></li>
+                                            <li>Real-time Activity Stream</li>
+                                            <li>Spreadsheet View <span class="new">new</span></li>
+                                            <li><del>iPhone and Android apps</del></li>
+                                            <li><del>Advanced email integration</del></li>
+                                            <li><del>Basic Integrations</del></li>
+                                        </ul>
+                                        <div class="btn-wrap">
+                                            <a class="btn btn-lg btn-border" href="">Buy Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-4">
+                                <div class="price-box">
+                                    <div class="price-box-top">
+                                        <span>$250</span><small>/mo</small>
+                                    </div>
+                                    <div class="price-box-content">
+                                        <h3>Enterprise</h3>
+                                        <ul>
+                                            <li>Manage tasks</li>
+                                            <li>Discussions in tasks</li>
+                                            <li>File sharing <span class="new">new</span></li>
+                                            <li>Real-time Activity Stream</li>
+                                            <li>Spreadsheet View <span class="new">new</span></li>
+                                            <li>iPhone and Android apps</li>
+                                            <li>Advanced email integration</li>
+                                            <li>Basic Integrations</li>
+                                        </ul>
+                                        <div class="btn-wrap">
+                                            <a class="btn btn-lg btn-border" href="">Buy Now</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section><!-- #prices -->																							
+				
+				<section id="blog" class="section section-blog">
+					<div class="animate-up">
+						<h2 class="section-title">From The Blog</h2>
+
+                        <div class="blog-grid">
+                            <div class="grid-sizer"></div>
+                            <div class="grid-item">
+                                <article class="post-box">
+                                    <div class="post-media">
+                                        <div class="post-image">
+                                            <a href="single.html"><img src="img/uploads/thumb-449x286-1.jpg" alt=""> </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="post-data">
+                                        <time class="post-datetime" datetime="2015-03-13T07:44:01+00:00">
+                                            <span class="day">03</span>
+                                            <span class="month">MAY</span>
+                                        </time>
+
+                                        <div class="post-tag">
+                                            <a href="">#Photo</a>
+                                            <a href="">#Architect</a>
+                                        </div>
+
+                                        <h3 class="post-title">
+                                            <a href="single-image.html">Image Post</a>
+                                        </h3>
+
+                                        <div class="post-info">
+                                            <a href=""><i class="icon icon-user"></i>by admin</a>
+                                            <a href=""><i class="icon icon-comments"></i>56</a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="grid-item">
+                                <article class="post-box">
+                                    <div class="post-media">
+                                        <div class="post-image">
+                                            <a href="single-vimeo.html">
+                                                <img src="img/uploads/thumb-449x286-5.jpg" alt="">
+                                                <span class="post-type-icon"><i class="icon icon-play"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="post-data">
+                                        <time class="post-datetime" datetime="2015-03-13T07:44:01+00:00">
+                                            <span class="day">03</span>
+                                            <span class="month">MAY</span>
+                                        </time>
+
+                                        <div class="post-tag">
+                                            <a href="">#Photo</a>
+                                            <a href="">#Architect</a>
+                                        </div>
+
+                                        <h3 class="post-title">
+                                            <a href="single-vimeo.html">Vimeo Video Post</a>
+                                        </h3>
+
+                                        <div class="post-info">
+                                            <a href=""><i class="icon icon-user"></i>by admin</a>
+                                            <a href=""><i class="icon icon-comments"></i>56</a>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+					</div>	
+				</section><!-- #blog -->
+				
+				<section id="text-section" class="section section-text">
+					<div class="animate-up animated">
+						<h2 class="section-title">Text Section</h2>
+						<div class="section-box">
+							<p>Hello! I’m Robert Smith and this is custom editor section. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nuncl them Toruk Macto calls to them!</p>
+						</div>
+					</div>
+				</section><!-- #text-section -->
+				
+				<section id="interests" class="section section-interests">
+					<div class="animate-up">
+						<h2 class="section-title">My Interests</h2>
+
+						<div class="section-box">
+							<p>I have a keen interest in photography. I was vice-president of the photography club during my time at university, 
+							and during this period I organised a number of very successful exhibitions and events both on and off campus.						
+							<br/>I also play the piano to grade 8 standard.</p>
+
+							<ul class="interests-list">
+								<li>
+									<i class="map-icon map-icon-bicycling"></i>
+									<span>Bicycling</span>
+								</li>
+								<li>
+									<i class="map-icon map-icon-movie-theater"></i>
+									<span>Watch Movies</span>
+								</li>
+								<li>
+									<i class="map-icon map-icon-ice-skating"></i>
+									<span>Skating</span>
+								</li>
+								<li>
+									<i class="map-icon map-icon-shopping-mall"></i>
+									<span>Shopping</span>
+								</li>
+								<li>
+									<i class="map-icon map-icon-tennis"></i>
+									<span>Playing Tennis</span>
+								</li>
+								<li>
+									<i class="map-icon map-icon-bowling-alley"></i>
+									<span>Playing Bowling</span>
+								</li>
+								<li>
+									<i class="map-icon map-icon-swimming"></i>
+									<span>Swimming</span>
+								</li>
+							</ul>
+						</div>
+					</div>	
+				</section><!-- #interests -->
+				
+				<section id="calendar" class="section section-calendar">
+					<div class="animate-up">
+						<h2 class="section-title">Availability Calendar</h2>
+
+						<div class="calendar-busy" data-weekstart="monday">
+							<div class="calendar-today" style="background-image: url('img/uploads/rs-calendar-cover.jpg')">
+								<div class="valign-outer">
+									<div class="valign-middle">
+										<div class="valign-inner">
+											<div class="date">
+												<span class="day"></span>
+												<span class="month"></span>
+											</div>
+											<div class="week-day"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<div class="calendar-cont">
+								<div class="calendar-header">
+									<div class="calendar-nav">
+										<span class="active-date"><span class="active-month"></span><span class="active-year"></span></span>
+										<a class="calendar-prev ripple-centered" title="Prev"><i class="icon icon-chevron_left"></i></a>
+										<a class="calendar-next ripple-centered" title="Next"><i class="icon icon-chevron_right"></i></a>
+									</div>
+								</div>
+
+								<table class="calendar-body">
+									<thead class="calendar-thead"></thead>
+									<tbody class="calendar-tbody"></tbody>
+								</table>
+								<div class="calendar-busy-note">Sorry. I'm not available on those days</div>
+							</div>
+						</div>
+					</div>	
+				</section><!-- #calendar -->
+				
+				<section id="contact" class="section section-contact">
+					<div class="animate-up">
+						<h2 class="section-title">Contact Me</h2>
+
+						<div class="row">
+							<div class="col-sm-6">
+								<div class="section-box contact-form">
+									<h3>Feel free to contact me</h3>
+									
+									<form class="contactForm" action="php/contact_form.php" method="post">
+										<div class="input-field">
+											<input class="contact-name" type="text" name="name"/>
+											<span class="line"></span>
+											<label>Name</label>
+										</div>
+
+										<div class="input-field">
+											<input class="contact-email" type="email" name="email"/>
+											<span class="line"></span>
+											<label>Email</label>
+										</div>
+
+										<div class="input-field">
+											<input class="contact-subject" type="text" name="subject"/>
+											<span class="line"></span>
+											<label>Subject</label>
+										</div>
+
+										<div class="input-field">
+											<textarea class="contact-message" rows="4" name="message"></textarea>
+											<span class="line"></span>
+											<label>Message</label>
+										</div>
+
+										<span class="btn-outer btn-primary-outer ripple">
+											<input class="contact-submit btn btn-lg btn-primary" type="submit" value="Send"/>
+										</span>
+										
+										<div class="contact-response"></div>
+									</form>
+								</div>
+							</div>
+
+							<div class="col-sm-6">
+								<div class="section-box contact-info has-map">
+									<ul class="contact-list">
+										<li class="clearfix">
+											<strong>Address</strong>
+											<span>Belgium, Brussels, Liutte 27, BE</span>
+										</li>
+										<li class="clearfix">
+											<strong>phone</strong>
+											<span><a href="tel:+12562548456">+1 256 254 84 56</a></span>
+										</li>
+										<li class="clearfix">
+											<strong>E-mail</strong>
+											<span><a href="mailto:robertsmith@company.com">robertsmith@company.com</a></span>
+										</li>
+									</ul>
+
+									<div id="map" data-latitude="50.84592" data-longitude="4.366859999999974"></div>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</section><!-- #contact -->
+				
+								
+			<!-- END: PAGE CONTENT -->
+                
+            </div><!-- .container -->
+        </div><!-- .content -->
+
+        <footer class="footer">
+            <div class="footer-social">
+                <ul class="social">
+					<li><a class="ripple-centered" href="https://www.facebook.com" target="_blank"><i class="icon icon-facebook"></i></a></li>
+					<li><a class="ripple-centered" href="https://twitter.com" target="_blank"><i class="icon icon-twitter"></i></a></li>
+					<li><a class="ripple-centered" href="https://www.linkedin.com" target="_blank"><i class="icon icon-linkedin"></i></a></li>
+					<li><a class="ripple-centered" href="https://plus.google.com" target="_blank"><i class="icon icon-google-plus"></i></a></li>
+					<li><a class="ripple-centered" href="https://dribbble.com" target="_blank"><i class="icon icon-dribbble"></i></a></li>
+					<li><a class="ripple-centered" href="https://www.instagram.com" target="_blank"><i class="icon icon-instagram"></i></a></li>
+				</ul>
+            </div>
+        </footer><!-- .footer -->
+    </div><!-- .wrapper -->
 	
-	<section id="features">
-	<div class="page-header"><h3>Features</h3><hr class="notop"></div>
-<ul>
-	<li>
-		Semantically Correct / Valid HTML Code</li>
-	<li>
-		HTML5, CSS3, jQuery powered</li>
-	<li>
-		Fully Responsive Layout</li>
-	<li>
-		Cross browser compatible ( Internet Explorer 8+, Firefox, Safari, Opera, Chrome etc. )</li>
-	<li>
-		Minimal and Clean Material Design</li>
-	<li>
-		Custom color scheme</li>
-	<li>
-		Optimized performance for mobile devices</li>
-	<li>
-		100% Retina Ready</li>
-	<li>
-		200+ social icons</li>
-	<li>
-		Extensive Documentation</li>
-	<li>
-		YouTube, Vimeo Support, Dailymotion and custom video</li>
-	<li>
-		Filterable + Popup Preview Portfolio</li>
-	<li>
-		Working AJAX Contact Form with validation</li>
-	<li>
-		Isotope jQuery Plugin &ndash; $25 Value! ( http://isotope.metafizzy.co/ )</li>
-	<li>
-		Code Optimized</li>
-	<li>
-		Easy to Use and Customize</li>
-	<li>
-		Free Support</li>
-	<li>
-		Google Map</li>
-	<li>
-		Icon Fonts</li>
-	<li>
-		Error 404 Page</li>
-	<li>
-		Google Web Fonts</li>
-</ul>
-<div>
-	&nbsp;</div>
-</section>
-<section id="html_structure">
-	<div class="page-header"><h3>HTML Structure</h3><hr class="notop"></div>
-<div>
-	Theme contains 12 html files.</div>
-<div>
-	&nbsp;</div>
-<div>
-	<strong>Home Page:</strong></div>
-<div>
-	&nbsp; &nbsp; &nbsp; index.html</div>
-<div>
-	&nbsp;</div>
-<div>
-	<strong>Blog Page:</strong></div>
-<div>
-	&nbsp; &nbsp; &nbsp; category.html</div>
-<div>
-	&nbsp;</div>
-<div>
-	<strong>Blog Post Pages:</strong></div>
-<div>
-	&nbsp; &nbsp; &nbsp; single.html</div>
-<div>
-	&nbsp; &nbsp; &nbsp; single-image.html</div>
-<div>
-	&nbsp; &nbsp; &nbsp; single-slider.html</div>
-<div>
-	&nbsp; &nbsp; &nbsp; single-audio.html</div>
-<div>
-	&nbsp; &nbsp; &nbsp; single-video.html</div>
-<div>
-	&nbsp; &nbsp; &nbsp; single-vimeo.html</div>
-<div>
-	&nbsp; &nbsp; &nbsp; single-youtube.html</div>
-<div>
-	&nbsp; &nbsp; &nbsp; single-dailymotion.html</div>
-<div>
-	&nbsp;</div>
-<div>
-	<div>
-		<strong>Typography&nbsp;Page:</strong></div>
-	<div>
-		&nbsp; &nbsp; &nbsp; typography.html</div>
-	<div>
-		&nbsp;</div>
-</div>
-<div>
-	<strong>Error Page:</strong></div>
-<div>
-	&nbsp; &nbsp; &nbsp;404.html</div>
-</section>
-<section id="css_files_and_structure">
-	<div class="page-header"><h3>CSS Files and Structure</h3><hr class="notop"></div>
-<div>
-	<pre class="prettyprint lang-html linenums">
-&lt;!-- Styles --&gt;
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;js/plugins/jquery.bxslider/jquery.bxslider.css&quot;&gt; <strong>(1)</strong>
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;js/plugins/jquery.customscroll/jquery.mCustomScrollbar.min.css&quot;&gt; <strong>(2)</strong>
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;js/plugins/jquery.mediaelement/mediaelementplayer.min.css&quot;&gt; <strong>(3)</strong>
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;js/plugins/jquery.fancybox/jquery.fancybox.css&quot;&gt; <strong>(4)</strong>
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt; <strong>(5)</strong>
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;colors/[color].css &quot;&gt; <strong>(6)</strong></pre>
-	<div>
-		&nbsp;</div>
-	<div>
-		<strong>(1)-(4)</strong>&nbsp;There are styles used from javascript plugins, for more details look &quot;JavaScript&quot;&nbsp;section.</div>
-	<div>
-		&nbsp;</div>
-	<div>
-		<strong>(6)</strong>&nbsp;There are styles for theme color,&nbsp;for more details look &quot;Theme Colors&quot;&nbsp;section.</div>
-	<div>
-		&nbsp;</div>
-	<div>
-		<strong>(7)</strong>&nbsp;G<span style="color: rgb(56, 56, 56); font-family: Arial, verdana, arial, sans-serif; line-height: 18px;">eneral styles for whole theme are in the style.css,&nbsp;</span><span style="color: rgb(56, 56, 56); font-family: Arial, verdana, arial, sans-serif; line-height: 18px;">if you would like to edit a specific section of the site, simply find the appropriate label in the CSS file, and then scroll down until you find the appropriate style that needs to be edited.</span></div>
-	<div>
-		&nbsp;</div>
-</div>
-<div>
-	<pre class="prettyprint lang-css linenums">
-/**
- * Table of Contents:
- *
- * 1.0 - Reset
- * 2.0 - General
- *     2.1 - Typography
- *     2.2 - Elements
- *     2.3 - Helper Classes
- *     2.4 - Icons
- * 3.0 - Form
- * 4.0 - Grid
- * 5.0 - WP Editor
- *     5.1 - Alignments
- *     5.2 - Caption
- *     5.3 - Galleries
- * 6.0 - Components
- *     6.1 - Buttons
- *     6.2 - Ripple
- *     6.3 - Social
- *     6.4 - Pagination
- *     6.5 - Custom Scroll
- *     6.6 - Video &amp; Audio Player
- *     6.7 - Scroll Animations
- * 7.0 - Containers
- * 8.0 - Preloader/Overlay
- * 9.0 - Header
- *     9.1 - Logo
- *     9.2 - Navigation
- *     9.3 - Mobile Navigation
- *     9.4 - Header With BgImage
- *     9.5 - Header Sticky
- * 10.0 - Sidebar
- *     10.1 - Sidebar Fixed
- *     10.2 - Widgets
- * 11.0 - Home
- *     11.1 - Section About
- *     11.2 - Section Skills
- *     11.3 - Section Interests
- *     11.4 - Section Portfolio
- *     11.5 - Section Timeline
- *     11.6 - Section References
- *     11.7 - Section Calendar
- *     11.8 - Section Contact
- * 12.0 - Blog
- *     12.1 - Blog General
- *     12.2 - Blog Post Box
- *     12.3 - Post Page
- *     12.4 - Post Comments
- * 13.0 - Error Page
- * 14.0 - Footer
- * 15.0 - Theme dark
- * 16.0 - Old Browsers
- */</pre>
-</div>
-<p>	&nbsp;</p>
-</section>
-<section id="theme_fonts">
-	<div class="page-header"><h3>Theme Fonts</h3><hr class="notop"></div>
-<div>
-	<h5>
-		<strong>Web Fonts</strong></h5>
-	<pre class="prettyprint lang-html linenums">
-&lt;!-- Google Fonts --&gt;
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://fonts.googleapis.com/css?family=Fredoka+One&quot;&gt;
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic&quot;&gt;</pre>
-	<div>
-		&nbsp;</div>
-	<div>
-		In the theme there are used two&nbsp;<a href="https://www.google.com/fonts">Google Web Fonts&nbsp;</a>Open Sans ans Fredoka One.</div>
-	<div>
-		&nbsp;</div>
-</div>
-<h5>
-	<strong>Icon Fonts</strong></h5>
-<div>
-	<pre class="prettyprint lang-html linenums">
-&lt;!-- Icon Fonts --&gt;
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;fonts/map-icons/css/map-icons.min.css&quot;&gt;<strong> (1)</strong>
-&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;fonts/icomoon/style.css&quot;&gt; <strong>(2)</strong></pre>
-	<div>
-		&nbsp;</div>
-	<div>
-		<strong>(1) - </strong><a href="http://map-icons.com/">Map icons</a>&nbsp;provided over 175+ icons that we have included in our theme and you can easly use theme. Map Icons can be mostly useful for &quot;My Interests&quot; section. Just use following html markup:</div>
-	<pre class="prettyprint lang-html linenums">
-&lt;i class=&quot;map-icon map-icon-[name]&quot;&gt;&lt;/i&gt;. </pre>
-	<div>
-		For example:</div>
-	<pre class="prettyprint lang-html linenums">
-&lt;i class=&quot;map-icon <span style="color: rgb(42, 40, 41); font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; letter-spacing: 0.35px; line-height: 17.55px;">map-icon-abseiling</span>&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;map-icon <span style="color: rgb(42, 40, 41); font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 13px; letter-spacing: 0.35px; line-height: 17.55px;">map-icon-motobike-trail</span>&quot;&gt;&lt;/i&gt;</pre>
-</div>
-<div>
-	&nbsp;</div>
-<div>
-	<strong>(2)</strong> - We have included some icons form <a href="https://icomoon.io">icomoon.io</a> too. If you want to use icons that we haven&#39;t provided, you can&nbsp;add as much icons as you want. (4000+ icons/your own from vector files)</div>
-<div>
-	&nbsp;</div>
-<div>
-	<em>NOTE: upload &quot;selection.json&quot; form our &nbsp;&quot;fonts/icomoon&quot; folder in icomoon.io site, add new icons than download and replace icomoon font.</em></div>
-</section>
-<section id="theme_colors">
-	<div class="page-header"><h3>Theme Colors</h3><hr class="notop"></div>
-<div>
-	Our template goes with an ability to change template color. We provide 19 predefined colors.</div>
-<div>
-	&nbsp;</div>
-<h5>
-	<strong>Cahnge Theme Color</strong></h5>
-<div>
-	&nbsp;</div>
-<div>
-	To change theme color using existig color add appropriate class (theme-color-33d685) &nbsp;on &lt;html&gt; &nbsp;tag and link to appropriate external style sheet ( green.css ).</div>
-<pre class="prettyprint lang-html linenums">
-&lt;html lang=&quot;en&quot; class=&quot;<strong>theme-color-33d685</strong>&quot;&gt;
-   &lt;head&gt;
-      ...
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt;
-      &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;colors/<strong>green.css</strong>&quot;&gt;
-   &lt;/head&gt;
-   ...
-&lt;/html&gt;</pre>
-<p>	<strong>THEME COLORS TABLE</strong></p>
-<table border="1" cellpadding="5" cellspacing="1" style="width: 700px">
-	<tbody style="width: 100%; border-collapse: collapse;">
-		<tr>
-			<td width="25%">
-				<strong>Color</strong></td>
-			<td width="25%">
-				<strong>HEX format</strong></td>
-			<td width="25%">
-				<strong>CSS File</strong></td>
-			<td width="25%">
-				<strong>Color Class</strong></td>
-		</tr>
-		<tr>
-			<td>
-				Red</td>
-			<td>
-				#e51c23</td>
-			<td>
-				red.css</td>
-			<td>
-				theme-color-<span style="font-size: 12px;">e51c23</span></td>
-		</tr>
-		<tr>
-			<td>
-				Pink</td>
-			<td>
-				#e91e63</td>
-			<td>
-				pink.css</td>
-			<td>
-				<span style="font-size: 12px;">theme-color-</span><span style="font-size: 12px;">e91e63</span></td>
-		</tr>
-		<tr>
-			<td>
-				Purple</td>
-			<td>
-				#9c27b0</td>
-			<td>
-				purple.css</td>
-			<td>
-				<span style="font-size: 12px;">theme-color-</span><span style="font-size: 12px;">9c27b0</span></td>
-		</tr>
-		<tr>
-			<td>
-				Deep Purple</td>
-			<td>
-				#673ab7</td>
-			<td>
-				deep-purple.css</td>
-			<td>
-				<span style="font-size: 12px;">theme-color-</span><span style="font-size: 12px;">673ab7</span></td>
-		</tr>
-		<tr>
-			<td>
-				Indigo</td>
-			<td>
-				#3f51b5</td>
-			<td>
-				indigo.css</td>
-			<td>
-				<span style="font-size: 12px;">theme-color-</span><span style="font-size: 12px;">3f51b5</span></td>
-		</tr>
-		<tr>
-			<td>
-				Blue</td>
-			<td>
-				#2196f3</td>
-			<td>
-				blue.css</td>
-			<td>
-				<span style="font-size: 12px;">theme-color-</span><span style="font-size: 12px;">2196f3</span></td>
-		</tr>
-		<tr>
-			<td>
-				Light Blue</td>
-			<td>
-				#03a9f4</td>
-			<td>
-				light-blue.css</td>
-			<td>
-				<span style="font-size: 12px;">theme-color-</span><span style="font-size: 12px;">03a9f4</span></td>
-		</tr>
-		<tr>
-			<td>
-				Cyan&nbsp;</td>
-			<td>
-				#00bcd4</td>
-			<td>
-				cyan.css</td>
-			<td>
-				<span style="font-size: 12px;">theme-color-</span><span style="font-size: 12px;">00bcd4</span></td>
-		</tr>
-		<tr>
-			<td>
-				Teal</td>
-			<td>
-				#009688</td>
-			<td>
-				teal.css</td>
-			<td>
-				<span style="font-size: 12px;">theme-color-</span><span style="font-size: 12px;">009688</span></td>
-		</tr>
-		<tr>
-			<td>
-				Green</td>
-			<td>
-				#33d685</td>
-			<td>
-				green.css</td>
-			<td>
-				<span style="font-size: 12px;">theme-color-</span><span style="font-size: 12px;">33d685</span></td>
-		</tr>
-		<tr>
-			<td>
-				Light Green</td>
-			<td>
-				#8bc34a</td>
-			<td>
-				light-green.css</td>
-			<td>
-				<span style="font-size: 12px;">theme-color-</span><span style="font-size: 12px;">8bc34a</span></td>
-		</tr>
-		<tr>
-			<td>
-				Lime</td>
-			<td>
-				#cddc39</td>
-			<td>
-				lime.css</td>
-			<td>
-				<span style="font-size: 12px;">theme-color-</span><span style="font-size: 12px;">cddc39</span></td>
-		</tr>
-		<tr>
-			<td>
-				Yellow</td>
-			<td>
-				#ffeb3b</td>
-			<td>
-				yellow.css</td>
-			<td>
-				<span style="font-size: 12px;">theme-color-</span><span style="font-size: 12px;">ffeb3b</span></td>
-		</tr>
-		<tr>
-			<td>
-				Amber</td>
-			<td>
-				#ffc107</td>
-			<td>
-				amber.css</td>
-			<td>
-				<span style="font-size: 12px;">theme-color-</span><span style="font-size: 12px;">ffc107</span></td>
-		</tr>
-		<tr>
-			<td>
-				Orange</td>
-			<td>
-				#ff9800</td>
-			<td>
-				orange.css</td>
-			<td>
-				<span style="font-size: 12px;">theme-color-</span><span style="font-size: 12px;">ff9800</span></td>
-		</tr>
-		<tr>
-			<td>
-				Deep Orange</td>
-			<td>
-				#ff5722</td>
-			<td>
-				deep-orange.css</td>
-			<td>
-				<span style="font-size: 12px;">theme-color-</span><span style="font-size: 12px;">ff5722</span></td>
-		</tr>
-		<tr>
-			<td>
-				Brown</td>
-			<td>
-				#795548</td>
-			<td>
-				brown.css</td>
-			<td>
-				<span style="font-size: 12px;">theme-color-</span><span style="font-size: 12px;">795548</span></td>
-		</tr>
-		<tr>
-			<td>
-				Grey</td>
-			<td>
-				#9e9e9e</td>
-			<td>
-				grey.css</td>
-			<td>
-				<span style="font-size: 12px;">theme-color-</span><span style="font-size: 12px;">9e9e9e</span></td>
-		</tr>
-		<tr>
-			<td>
-				Blue Grey</td>
-			<td>
-				#607d8b</td>
-			<td>
-				blue-grey.css</td>
-			<td>
-				<span style="font-size: 12px;">theme-color-</span><span style="font-size: 12px;">607d8b</span></td>
-		</tr>
-	</tbody>
-</table>
-<div>
-	&nbsp;</div>
-<h5>
-	<strong>Use Custom Color</strong></h5>
-<div>
-	&nbsp;</div>
-<div>
-	If you want to use your custom theme color, then do following steps:</div>
-<ol style="padding-right: 0px; padding-left: 0px; font-size: 12px; margin: 18px 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; line-height: 1.5em; color: rgb(56, 56, 56);">
-	<li style="margin: 0px 0px 0px 36px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; list-style: decimal;">
-		Choose your color in HEX format (for example &nbsp;#98002b)</li>
-	<li style="margin: 0px 0px 0px 36px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; list-style: decimal;">
-		Create new css file in colors folder ( for example cherry.css )</li>
-	<li style="margin: 0px 0px 0px 36px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; list-style: decimal;">
-		Copy following css in you created file<br>
-		<pre class="prettyprint lang-css linenums">
-.theme-color-[custom-color] a,
-.theme-color-[custom-color] blockquote:before,
-.theme-color-[custom-color] .contact-map .contact-info a:hover,
-.theme-color-[custom-color] .interests-list i,
-.theme-color-[custom-color] .input-field.used label,
-.theme-color-[custom-color] .logo span,
-.theme-color-[custom-color] #map .map-icon,
-.theme-color-[custom-color] .nav-wrap .btn-mobile-nav,
-.theme-color-[custom-color] .page-404 h2 span,
-.theme-color-[custom-color] .post-box .post-title a:hover,
-.theme-color-[custom-color] .post-single .post-title a:hover,
-.theme-color-[custom-color] .post-comments .section-title,
-.theme-color-[custom-color] .ref-box .person-speech:before,
-.theme-color-[custom-color] .timeline-box .date,
-.theme-color-[custom-color] .widget-title,
-.theme-color-[custom-color] .widget_meta ul li a:hover,
-.theme-color-[custom-color] .widget_archive ul li a:hover,
-.theme-color-[custom-color] .widget_nav_menu ul li a:hover,
-.theme-color-[custom-color] .widget_categories ul li a:hover,
-.theme-color-[custom-color] .widget_recent_entries ul li a:hover,
-.theme-color-[custom-color] .widget_recent_comments ul li a:hover,
-.theme-color-[custom-color] .widget_search .search-form:before,
-.theme-color-[custom-color] .widget-popuplar-posts .post-title a:hover,
-.theme-color-[custom-color] .widget-recent-posts .post-title a:hover {
-      color: #[custom-color];
-}
-
-.theme-color-[custom-color] ins,
-.theme-color-[custom-color] mark,
-.theme-color-[custom-color] .btn-primary,
-.theme-color-[custom-color] .btn-primary-outer,
-.theme-color-[custom-color] .btn-sidebar-close,
-.theme-color-[custom-color] .calendar-busy .calendar-body td .current-day,
-.theme-color-[custom-color] .calendar-busy .calendar-today .date,
-.theme-color-[custom-color] .filter .active:after,
-.theme-color-[custom-color] .filter-bar .filter-bar-line,
-.theme-color-[custom-color] .input-field .line:before,
-.theme-color-[custom-color] .input-field .line:after,
-.theme-color-[custom-color] .mobile-nav,
-.theme-color-[custom-color] .nav &gt; ul &gt; li &gt; a &gt; span,
-.theme-color-[custom-color] .post-datetime,
-.theme-color-[custom-color] .profile-social,
-.theme-color-[custom-color] .profile-preword span,
-.theme-color-[custom-color] .progress-bar .bar-fill,
-.theme-color-[custom-color] .progress-bar .bar-line:after,
-.theme-color-[custom-color] .price-box.box-primary .btn,
-.theme-color-[custom-color] .price-box.box-primary .price-box-top,
-.theme-color-[custom-color] .profile-list .button,
-.theme-color-[custom-color] .pagination .page-numbers.current,
-.theme-color-[custom-color] .pagination .page-numbers.current:hover,
-.theme-color-[custom-color] .pagination .page-numbers:active,
-.theme-color-[custom-color] .pagination .page-numbers.next:active,
-.theme-color-[custom-color] .pagination .page-numbers.prev:active,
-.theme-color-[custom-color] .timeline-bar,
-.theme-color-[custom-color] .timeline-box .dot,
-.theme-color-[custom-color] .timeline-box-compact .date span,
-.theme-color-[custom-color] .widget_tag_cloud a:hover {
-       background-color: #[custom-color];
-}
-
-.theme-color-[custom-color] .mejs-container .mejs-controls .mejs-time-rail .mejs-time-current,
-.theme-color-[custom-color] .mejs-container .mejs-controls .mejs-horizontal-volume-slider .mejs-horizontal-volume-current {
-       background: #[custom-color];
-}
-
-.theme-color-[custom-color] .timeline-box-inner,
-.theme-color-[custom-color] .price-box.box-primary .btn,
-.theme-color-[custom-color] .widget_search .search-form,
-.theme-color-[custom-color] .widget_tag_cloud a:hover {
-       border-color: #[custom-color]; }
-
-.theme-color-[custom-color] .page-404 h2 span:before,
-.theme-color-[custom-color] .profile-preword span:before,
-.theme-color-[custom-color] .timeline-box-compact .date span:before {
-       border-left-color: #[custom-color];
-}
-
-.theme-color-[custom-color] .price-box.box-primary .price-box-top:before {
-       border-top-color: #[custom-color];
-}</pre>
-	</li>
-	<li style="margin: 0px 0px 0px 36px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; list-style: decimal;">
-		&nbsp;Replace all&nbsp;<span style="font-size: 12px;">[custom-color]-s with your choosed color without hex simbol ( i.e.&nbsp;<span style="font-size: 12px;">98002b&nbsp;</span>)</span></li>
-	<li style="margin: 0px 0px 0px 36px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; list-style: decimal;">
-		<span style="font-family: inherit; font-style: inherit; font-weight: inherit; color: rgb(34, 34, 34); font-size: 12px;">Add&nbsp;</span><span style="font-family: inherit; font-style: inherit; font-weight: inherit; color: rgb(34, 34, 34); font-size: 12px;">color class to &lt;html&gt; tag :&nbsp;</span><strong><span style="font-family: inherit; font-style: inherit; font-weight: inherit; color: rgb(34, 34, 34); font-size: 12px;">&lt;html class=&quot;</span><span style="font-family: inherit; font-style: inherit; font-weight: inherit; color: rgb(34, 34, 34); font-size: 12px;">theme-color-</span><span style="font-family: inherit; font-style: inherit; font-weight: inherit; color: rgb(34, 34, 34); font-size: 12px;"><span style="color: rgb(56, 56, 56); font-size: 12px;">98002b</span>&quot;&gt;</span></strong></li>
-	<li style="margin: 0px 0px 0px 36px; padding: 0px; border: 0px; outline: 0px; font-weight: inherit; font-style: inherit; font-family: inherit; vertical-align: baseline; list-style: decimal;">
-		<span style="font-family: inherit; font-style: inherit; font-weight: inherit; color: rgb(34, 34, 34); font-size: 12px;"><span style="line-height: 1.5em;">Link to&nbsp;</span>created&nbsp;<span style="line-height: 1.5em;">external style sheet</span>&nbsp;: &nbsp;<strong>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;colors/cherry</strong></span><strong><span style="font-family: inherit; font-style: inherit; font-weight: inherit; color: rgb(34, 34, 34); font-size: 12px;">.css</span><span style="font-family: inherit; font-style: inherit; font-weight: inherit; color: rgb(34, 34, 34); font-size: 12px;">&quot;&gt;</span></strong></li>
-</ol>
-<h5>
-	<strong>Change Skin Color</strong></h5>
-<p>	Theme has dark and light skins. To use light skin just add &quot;theme-skin-light&quot; class to the &lt;html&gt; tag, for dark version add &quot;theme-skin-dark&quot;.</p>
-<pre class="prettyprint lang-html linenums">
-&lt;html class=&quot;<strong>theme-skin-light</strong>&quot;&gt;...&lt;/html&gt;
-
-&lt;html class=&quot;<strong>theme-skin-dark</strong>&quot;&gt;...&lt;/html&gt;</pre>
-<p>	&nbsp;</p>
-<div style="page-break-after: always;">
-	<span style="display: none;">&nbsp;</span></div>
-<p>	So if you want to use the light skin with color scheme &nbsp;then use in the body these clases:</p>
-<pre class="prettyprint lang-html linenums">
-&lt;html class=&quot;<strong>theme-color-33d685 theme-skin-light</strong>&quot;&gt;</pre>
-</section>
-<section id="javascript">
-	<div class="page-header"><h3>JavaScript</h3><hr class="notop"></div>
-<p>	Libs:</p>
-<ol style="padding-right: 0px; padding-left: 0px; font-size: 12px; margin: 18px 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; line-height: 1.5em; color: rgb(56, 56, 56);">
-	<li style="margin: 0px 0px 0px 36px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-size: 12px; font-family: inherit; vertical-align: baseline; list-style: decimal;">
-		<strong>jquery</strong>&nbsp;-&nbsp;&nbsp;is a Javascript library that greatly reduces the amount of code that you must write. For more information, please visit <a href="http://www.jquery.com/">http://www.jquery.com</a></li>
-	<li style="margin: 0px 0px 0px 36px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-size: 12px; font-family: inherit; vertical-align: baseline; list-style: decimal;">
-		<strong>modernizer</strong> -&nbsp;<span style="font-family: inherit; font-size: 12px; font-style: inherit; line-height: 1.5em;">respond to user&rsquo;s browser features.&nbsp;</span><span style="font-size: 12px;">For more information, please visit&nbsp;</span><a href="https://modernizr.com/">https://modernizr.com</a></li>
-	<li style="margin: 0px 0px 0px 36px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-size: 12px; font-family: inherit; vertical-align: baseline; list-style: decimal;">
-		<div>
-			<strong>html5shiv </strong>-&nbsp;enables use of HTML5 sectioning elements in legacy Internet Explorer6-9.&nbsp;<span style="font-size: 12px; font-family: inherit; font-style: inherit; line-height: 1.5em;">For more information, please visit&nbsp;</span><a href="https://github.com/afarkas/html5shiv"><span style="font-family: inherit; font-size: 12px; font-style: inherit; line-height: 1.5em;">https://github.com/afarkas/html5shiv</span></a></div>
-	</li>
-	<li style="margin: 0px 0px 0px 36px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-size: 12px; font-family: inherit; vertical-align: baseline; list-style: decimal;">
-		<div>
-			<span style="font-family: inherit; font-size: 12px; font-style: inherit; line-height: 1.5em;"><strong>respond </strong>-&nbsp;</span><span style="font-family: inherit; font-size: 12px; font-style: inherit; line-height: 1.5em;">fast &amp; lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more).&nbsp;</span><span style="font-size: 12px; font-family: inherit; font-style: inherit; line-height: 1.5em;">For more information, please visit&nbsp;</span><a href="https://github.com/scottjehl/Respond"><span style="font-family: inherit; font-size: 12px; font-style: inherit; line-height: 1.5em;">https://github.com/scottjehl/Respond</span></a></div>
-	</li>
-</ol>
-<p>	Plugins:</p>
-<ol style="padding-right: 0px; padding-left: 0px; font-size: 12px; margin: 18px 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; line-height: 1.5em; color: rgb(56, 56, 56);">
-	<li style="margin: 0px 0px 0px 36px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-size: 12px; font-family: inherit; vertical-align: baseline; list-style: decimal;">
-		<strong>bxslider</strong> - responsive slider plugin.&nbsp;<span style="font-family: inherit; font-size: 12px; font-style: inherit; line-height: 1.5em;">&nbsp;</span><span style="font-size: 12px;">For more information visit&nbsp;</span><a href="http://bxslider.com/">http://bxslider.com/</a></li>
-	<li style="margin: 0px 0px 0px 36px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-size: 12px; font-family: inherit; vertical-align: baseline; list-style: decimal;">
-		<strong>customscroll </strong>- custom content scroller plugin.&nbsp;<span style="font-size: 12px;">For more information visit&nbsp;</span><a href="http://manos.malihu.gr/jquery-custom-content-scroller/">http://manos.malihu.gr/jquery-custom-content-scroller/</a></li>
-	<li style="margin: 0px 0px 0px 36px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-size: 12px; font-family: inherit; vertical-align: baseline; list-style: decimal;">
-		<strong>fancybox </strong>- plugin for displaying images, html content and multi-media in a &quot;lightbox&quot;.&nbsp;<span style="font-size: 12px;">For more information visit&nbsp;</span><a href="http://fancyapps.com/fancybox/">http://fancyapps.com/fancybox/</a></li>
-	<li style="margin: 0px 0px 0px 36px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-size: 12px; font-family: inherit; vertical-align: baseline; list-style: decimal;">
-		<strong>mediaelement </strong>- video and audio player plugin.&nbsp;<span style="font-size: 12px;">For more information visit&nbsp;</span><a href="http://mediaelementjs.com/">http://mediaelementjs.com/</a></li>
-	<li style="margin: 0px 0px 0px 36px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-size: 12px; font-family: inherit; vertical-align: baseline; list-style: decimal;">
-		<strong>imagesloaded </strong>- plugin detect when images have been loaded.<span style="font-size: 12px;">&nbsp;</span><span style="font-size: 12px;">For more information visit&nbsp;</span>&nbsp;<a href="http://imagesloaded.desandro.com/">http://imagesloaded.desandro.com/</a></li>
-	<li style="margin: 0px 0px 0px 36px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-size: 12px; font-family: inherit; vertical-align: baseline; list-style: decimal;">
-		<strong style="font-size: 12px;">mousewheel -&nbsp;</strong>plugin adds cross-browser mouse wheel support. For more information visit&nbsp;<a href="https://github.com/jquery/jquery-mousewheel">https://github.com/jquery/jquery-mousewheel</a></li>
-	<li style="margin: 0px 0px 0px 36px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-size: 12px; font-family: inherit; vertical-align: baseline; list-style: decimal;">
-		<strong>isotope </strong>- plugin for intelligent and dynamic layouts that can&#39;t be achieved with CSS alone.&nbsp;<span style="font-size: 12px;">For more information visit&nbsp;</span><a href="http://isotope.metafizzy.co/">http://isotope.metafizzy.co/</a></li>
-	<li style="margin: 0px 0px 0px 36px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-size: 12px; font-family: inherit; vertical-align: baseline; list-style: decimal;">
-		<strong>appeare </strong>-&nbsp;<span style="font-family: inherit; font-size: 12px; font-style: inherit; color: rgb(34, 34, 34);">&nbsp;</span>plugin for tracking element&#39;s appearance in browser viewport. For more information visit&nbsp;<a href="https://github.com/morr/jquery.appear/">https://github.com/morr/jquery.appear/</a></li>
-</ol>
-<p style="margin: 18px 0px; padding: 0px; border: 0px; outline: 0px; font-size: 12px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; line-height: 1.5em; color: rgb(56, 56, 56);">
-	<span style="font-size: 12px;">Google Map :</span></p>
-<ol style="padding-right: 0px; padding-left: 0px; font-size: 12px; margin: 18px 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; line-height: 1.5em; color: rgb(56, 56, 56);">
-	<li style="margin: 0px 0px 0px 36px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-size: 12px; font-family: inherit; vertical-align: baseline; list-style: decimal;">
-		<strong>google maps api</strong> -&nbsp;provide methods and tools that can be used for&nbsp;customize maps, and the information on maps. For more information visit&nbsp;<a href="https://developers.google.com/maps/">https://developers.google.com/maps/</a></li>
-	<li style="margin: 0px 0px 0px 36px; padding: 0px; border: 0px; outline: 0px; font-style: inherit; font-size: 12px; font-family: inherit; vertical-align: baseline; list-style: decimal;">
-		<strong>map icons</strong> -&nbsp;an icon font for use with google maps api. For more information visit&nbsp;<a href="http://map-icons.com/">http://map-icons.com/</a></li>
-</ol>
-<p style="font-size: 12px; margin: 18px 0px; padding: 0px; border: 0px; outline: 0px; font-family: Arial, verdana, arial, sans-serif; vertical-align: baseline; line-height: 1.5em; color: rgb(56, 56, 56);">
-	All custom js code is located in <strong>site.js</strong>.</p>
-<p>	&nbsp;</p>
-</section>
-<section id="wordpress_ready">
-	<div class="page-header"><h3>Wordpress Ready</h3><hr class="notop"></div>
-<p>	Our theme is ready for Wordpress theme creation.</p>
-<p>	We provide css styles &nbsp;for Wordpress editor (&nbsp;thypography.html ) and all default Wordpress widgets (some of them you can find in sidebar).</p>
-</section>
-<section id="contact_form">
-	<div class="page-header"><h3>Contact Form</h3><hr class="notop"></div>
-<p style="margin: 0px; font-stretch: normal; font-size: 13px; font-family: Arial, Helvetica, sans-serif; color: rgb(101, 101, 101); line-height: 21px;">
-	To receive emails set your email in the file&nbsp;<strong>/php/contact_form.php</strong></p>
-<pre class="php" style="font-stretch: normal; font-size: 13px; line-height: normal; font-family: Arial, Helvetica, sans-serif; color: rgb(101, 101, 101);">
-<code>$emailTo = &quot;&#101;&#109;&#97;&#105;&#108;&#64;&#115;&#105;&#116;&#101;&#110;&#97;&#109;&#101;&#46;&#99;&#111;&#109;&quot;; // Enter your email for feedbacks here</code></pre>
-</section>
-<section id="portfolio">
-	<div class="page-header"><h3>Portfolio</h3><hr class="notop"></div>
-<p>	Each portfolio item should have following html structure:</p>
-<pre class="prettyprint lang-html linenums">
-&lt;div class=&quot;grid-item <strong>[size]</strong> <strong>[category]</strong>&quot;&gt;
-    &lt;div class=&quot;grid-box&quot;&gt;     
-
-      &lt;figure class=&quot;portfolio-figure&quot;&gt;
-            &lt;img src=&quot;http://image_url&quot; alt=&quot;&quot;/&gt;
-            &lt;figcaption class=&quot;portfolio-caption&quot;&gt;
-                &lt;div class=&quot;portfolio-caption-inner&quot;&gt;
-                    &lt;h3 class=&quot;portfolio-title&quot;&gt;Project Title&lt;/h3&gt;
-                    &lt;h4 class=&quot;portfolio-cat&quot;&gt;Project Category&lt;/h4&gt;
-
-                    &lt;div class=&quot;btn-group&quot;&gt;
-                        &lt;a class=&quot;btn-link&quot; href=&quot;http://project_url&quot; target=&quot;_blank&quot;&gt;&lt;i class=&quot;icon icon-link&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-                        &lt;a class=&quot;portfolioFancybox btn-zoom&quot; data-fancybox-group=&quot;portfolioFancybox<strong>[number]</strong>&quot; href=&quot;#portfolio<strong>[number]</strong>-inline1&quot;&gt;&lt;i class=&quot;icon icon-eye&quot;&gt;&lt;/i&gt;&lt;/a&gt;
-                        &lt;a class=&quot;portfolioFancybox hidden&quot; data-fancybox-group=&quot;portfolioFancybox<strong>[number]</strong>&quot; href=&quot;#portfolio<strong>[number]</strong>-inline2&quot;&gt;&lt;/a&gt;
-                        &lt;a class=&quot;portfolioFancybox hidden&quot; data-fancybox-group=&quot;portfolioFancybox<strong>[number]</strong>&quot; href=&quot;#portfolio<strong>[number]</strong>-inline3&quot;&gt;&lt;/a&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/figcaption&gt;
-        &lt;/figure&gt;
-
-        &lt;!-- Start: Portfolio Inline Boxes --&gt;
-        &lt;div id=&quot;portfolio[number]-inline1&quot; class=&quot;fancybox-inline-box&quot;&gt; <strong>[popup content] </strong>&lt;/div&gt;
-        &lt;div id=&quot;portfolio[number]-inline2&quot; class=&quot;fancybox-inline-box&quot;&gt; <strong>[popup content] </strong>&lt;/div&gt; 
-        &lt;div id=&quot;portfolio[number]-inline3&quot; class=&quot;fancybox-inline-box&quot;&gt; <strong>[popup content]</strong> &lt;/div&gt;
-        &lt;!-- End: Portfolio Inline Boxes --&gt;
-
-    &lt;/div&gt;
-&lt;/div&gt;&lt;!-- .grid-item --&gt;</pre>
-<p>	<strong>[size] </strong>- we have two predefined sizes for portfolio items, large and small. For large items use <strong>size22 </strong>class, for small ones use <strong>size11 </strong>class.<br>
-	<strong>[category]</strong> - portfolio category, used for filtering. You can provide more than one class for filtering, for example <strong>photography, nature ...</strong><br>
-	<strong>[number] </strong>- each portfolio should have uniq number<br>
-	<strong>[popup content] </strong>- in general can be any html content, we provide <strong>media + title + text</strong>. For media you can use image, custom video, iframe (youtube, vimeo, dailymotion ...).</p>
-<p>	For ajax loading (when click &#39;+&#39; button) add portfolio items &nbsp;in /<strong>ajax/portfolio.html</strong> file.</p>
-<p>	&nbsp;</p>
-<p>	<strong>Portfolio Content&nbsp;</strong>should have following html structure:</p>
-<pre class="prettyprint lang-html linenums">
-&lt;div id=&quot;ID&quot; class=&quot;fancybox-inline-box&quot;&gt;
-     &lt;div class=&quot;inline-embed&quot; ... &gt;...&lt;/div&gt;
-     &lt;div class=&quot;inline-cont&quot;&gt;
-          &lt;h2 class=&quot;inline-title&quot;&gt;Title&lt;/h2&gt;
-          &lt;div class=&quot;inline-text&quot;&gt;Content&lt;/div&gt;
-     &lt;/div&gt;
-&lt;/div&gt;</pre>
-<p>	We use &lt;div class=&quot;inline-embed&quot;&gt;&lt;/div&gt; element to insert different media (image, iframe, custom video) into popup</p>
-<pre class="prettyprint lang-html linenums">
-&lt;!-- Image --&gt;
-&lt;div class=&quot;inline-embed&quot; data-embed-type=&quot;image&quot; data-embed-url=&quot;image.jpg&quot;&gt;&lt;/div&gt;
-
-&lt;!-- Vimeo --&gt;
-&lt;div class=&quot;inline-embed&quot; data-embed-type=&quot;iframe&quot; data-embed-url=&quot;https://player.vimeo.com/video/118244244&quot;&gt;&lt;/div&gt;
-
-&lt;!-- Dailymotion --&gt;
-&lt;div class=&quot;inline-embed&quot; data-embed-type=&quot;iframe&quot; data-embed-url=&quot;https://www.dailymotion.com/embed/video/x314rdy&quot;&gt;&lt;/div&gt;
-
-&lt;!-- Youtube --&gt;
-&lt;div class=&quot;inline-embed&quot; data-embed-type=&quot;iframe&quot; data-embed-url=&quot;https://www.youtube.com/embed/mZb_gat5YCY&quot;&gt;&lt;/div&gt;
-
-&lt;!-- Custom Video --&gt;
-&lt;div class=&quot;inline-embed&quot; data-embed-type=&quot;video&quot;&gt;
-    &lt;video width=&quot;100%&quot; height=&quot;100%&quot; poster=&quot;img/uploads/media/echo-hereweare.jpg&quot; controls=&quot;controls&quot; preload=&quot;none&quot;&gt;
-        &lt;source type=&quot;video/mp4&quot; src=&quot;video_url.mp4&quot; /&gt;
-        &lt;source type=&quot;video/webm&quot; src=&quot;video_url.webm&quot; /&gt;
-        &lt;source type=&quot;video/ogg&quot; src=&quot;video_url.ogv&quot; /&gt;
-    &lt;/video&gt;
-&lt;/div&gt;</pre>
-</section>
-<section id="calendar">
-	<div class="page-header"><h3>Calendar</h3><hr class="notop"></div>
-<p>	By default calendar week starts on Sunday.<br>
-	To start calendar week on Monday just add&nbsp;<strong>data-weekstart=&quot;monday&quot; </strong>attrbute:</p>
-<pre class="prettyprint lang-html linenums">
-&lt;div class=&quot;calendar-busy&quot; data-weekstart=&quot;monday&quot;&gt;
-...
-&lt;/div&gt;</pre>
-<p>	&nbsp;</p>
-<p>	To add your busy days in calendar go to <strong>/js/site.js line 13 </strong>and add your busy days with following format:</p>
-<pre class="prettyprint lang-js linenums">
-var calendarBusyDays = [
-
-        new Date(2015, 8, 10),
-
-        new Date(2015, 8, 8),
-
-        new Date(2015, 8, 30),
-
-        new Date(2015, 9, 3),
-
-        new Date(2015, 9, 13),
-
-        new Date(2015, 9, 29),
-
-        new Date(2015, 10, 5),
-
-        new Date(2015, 10, 18),
-
-        new Date(2015, 10, 25),
-
-        new Date(2015, 11, 3),
-
-        new Date(2015, 11, 15),
-
-        new Date(2015, 11, 28),
-
-        new Date(2015, 11, 29),
-
-        new Date(2015, 11, 30),
-
-        new Date(2015, 11, 31)
-
-    ];</pre>
-</section>
-<section id="04_page">
-	<div class="page-header"><h3>404 page</h3><hr class="notop"></div>
-<div>
-	A 404 page is what a user sees when they try to reach a non-existent page on your site (because they&#39;ve clicked on a broken link, the page has been deleted, or they&#39;ve mistyped a URL).</div>
-<div>
-	&nbsp;</div>
-<div>
-	To set up 404.html page on your server add this to the .htaccess file:</div>
-<div>
-	&nbsp;</div>
-<div>
-	<strong>ErrorDocument 404 http://www.domain.com/404page.html</strong></div>
-<div>
-	&nbsp;</div>
-<div>
-	Thats it !</div>
-<div>
-	&nbsp;</div>
-<div>
-	For more detailed instructions please look following article:</div>
-<div>
-	http://www.htmlgoodies.com/beyond/reference/article.php/3472591/How-Do-I-Create-a-Custom-404-Error-Page.htm</div>
-<div>
-	&nbsp;</div>
-</section>
-<section id="sources_and_credits">
-	<div class="page-header"><h3>Sources and Credits</h3><hr class="notop"></div>
-<h2>
-	&nbsp;</h2>
-<h2>
-	Images</h2>
-<div>
-	&nbsp;</div>
-<div>
-	&nbsp;</div>
-<div>
-	&nbsp;</div>
-<ul>	<li>		<a href="https://pixabay.com/ru/%D0%BA%D0%BE%D0%BD%D1%84%D0%B5%D1%80%D0%B5%D0%BD%D1%86%D0%B8%D0%B8-%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0-%D1%81%D0%BE%D0%B2%D0%B5%D1%89%D0%B0%D0%BD%D0%B8%D0%B5-%D0%B7%D0%B0%D0%BF%D1%83%D1%81%D0%BA-593355/">Pixabay.com</a></li>
-	<li>		<a href="https://unsplash.com/">Unsplash.com</a></li>
-	<li>		<a href="http://Photodune.net">Photodune.net</a>&nbsp;- <a href="http://photodune.net/item/cheerful-man-sitting-at-the-table-with-laptop/12123551">http://photodune.net/item/cheerful-man-sitting-at-the-table-with-laptop/12123551</a></li>
-</ul>
-<div>
-	&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</div>
-<div>
-	&nbsp;</div>
-<h2>
-	Fonts</h2>
-<div>
-	&nbsp;</div>
-<div>
-	In the theme there are used two&nbsp;<a href="https://www.google.com/fonts">Google Web Fonts&nbsp;</a>Open Sans ans Fredoka One.</div>
-</section>
-<section id="how_to_rate">
-	<div class="page-header"><h3>How to rate</h3><hr class="notop"></div>
-<h5>
-	Go to <a href="http://themeforest.net/" target="_blank">Themeforest </a>and follow the image instructions</h5>
-<p>	&nbsp;</p>
-<p>	<img alt="" src="assets/images/image_1.jpg"  ></p>
-</section>
-
+	<a class="btn-scroll-top" href="#"><i class="icon icon-arrow-up"></i></a>
+    <div id="overlay"></div>
+    <div id="preloader">
+		<div class="preload-icon"><span></span><span></span></div>
+		<div class="preload-text">Loading ...</div>
 	</div>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+    <script type="text/javascript" src="fonts/map-icons/js/map-icons.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.mousewheel-3.0.6.pack.js"></script>
+    <script type="text/javascript" src="js/plugins/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript" src="js/plugins/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.appear.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.onepagenav.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.bxslider/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.customscroll/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.mediaelement/mediaelement-and-player.min.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="js/plugins/jquery.fancybox/helpers/jquery.fancybox-media.js"></script>
+	<script type="text/javascript" src="js/plugins/jquery.owlcarousel/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="js/site.min.js"></script>
 </body>
 </html>
