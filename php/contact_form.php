@@ -20,6 +20,6 @@
 	$body .= "<p><strong>Subject:</strong> $subject</p>";
 	$body .= "<p><strong>Message:</strong><br/> $message</p>";
 	
-	$result = mail($emailTo, $subject, $body, $headers); //This method sends the mail.
+	// $result = mail($emailTo, $subject, $body, $headers); //This method sends the mail.
 	echo "Your email was sent successfully!"; // Success message
 ?>
