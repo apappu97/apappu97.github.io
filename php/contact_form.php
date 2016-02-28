@@ -1,5 +1,5 @@
 <?php 
-	$emailTo = "email@sitename.com"; // Enter your email for feedbacks here 	
+	$emailTo = "apappu@stanford.edu"; // Enter your email for feedbacks here 	
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$subject = $_POST['subject'];
