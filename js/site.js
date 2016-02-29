@@ -1121,15 +1121,37 @@
                 message.parent().addClass('error');
             }
 
+            // run php script to send email
             if (!errors) {
-                $.post("php/contact_form.php",
-                    contact_form.serialize(),
-                    function (response) {
-                        contact_form_response.html(response);
+                // $.post("php/contact_form.php",
+                //     contact_form.serialize(),
+                //     function (response) {
+                //         contact_form_response.html(response);
+                //     }
+                // );
+                $.ajax({
+                  type: “POST”,
+                  url: “https://mandrillapp.com/api/1.0/messages/send.json”,
+                  data: {
+                    ‘key’: ‘ON39d8uARDgJHYNGcNMXAQ’,
+                    ‘message’: {
+                      ‘from_email’: ‘info@aneeshpappu.com’,
+                      ‘to’: [
+                          {
+                            ‘email’: ‘aneesh@aneeshpappu.com’,
+                            ‘name’: ‘Aneesh’,
+                            ‘type’: ‘to’
+                          }
+                        ],
+                      ‘autotext’: ‘true’,
+                      ‘subject’: ‘Website: Contact me’,
+                      ‘html’: name + email + message
                     }
-                );
+                  }
+                 }).done(function(response) {
+                   console.log(response); // if you're into that sorta thing
+                 });
             }
-
             return false;
         });
 
