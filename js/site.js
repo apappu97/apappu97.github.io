@@ -1121,8 +1121,10 @@
                 message.parent().addClass('error');
             }
 
-            // run php script to send email
+ 
             if (!errors) {
+                console.log("entering script to send emails");
+                //run php script to send email
                 // $.post("php/contact_form.php",
                 //     contact_form.serialize(),
                 //     function (response) {
