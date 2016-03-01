@@ -1093,9 +1093,10 @@
         });
 
         /** Contact Form */
-        $('.contact-submit').on('click', function (e) {
+        $('.contact-submit').click(function (e) {
+            console.log($('.contact-submit'))
+            console.log("click event entered");
             ripple($(this).parent(), e.pageX, e.pageY);
-
             var errors;
             var contact_form = $(this).closest('.contactForm');
             var contact_form_items = contact_form.find('.input-field');
@@ -1132,27 +1133,27 @@
                 //     }
                 // );
                 $.ajax({
-                  type: “POST”,
-                  url: “https://mandrillapp.com/api/1.0/messages/send.json”,
-                  data: {
-                    ‘key’: ‘ON39d8uARDgJHYNGcNMXAQ’,
-                    ‘message’: {
-                      ‘from_email’: ‘info@aneeshpappu.com’,
-                      ‘to’: [
-                          {
-                            ‘email’: ‘aneesh@aneeshpappu.com’,
-                            ‘name’: ‘Aneesh’,
-                            ‘type’: ‘to’
-                          }
-                        ],
-                      ‘autotext’: ‘true’,
-                      ‘subject’: ‘Website: Contact me’,
-                      ‘html’: name + email + message
+                    type: "POST",
+                    url: "https://mandrillapp.com/api/1.0/messages/send.json",
+                    data: {
+                        'key': 'ON39d8uARDgJHYNGcNMXAQ',
+                        'message': {
+                            'from_email': 'info@aneeshpappu.com',
+                            'to': [
+                            {
+                                'email': 'aneesh@aneeshpappu.com',
+                                'name': 'Aneesh',
+                                'type': 'to'
+                            }
+                            ],
+                            'autotext': 'true',
+                            'subject': 'Website: Contact me form submission',
+                            'html': name + email + message 
+                        }
                     }
-                  }
-                 }).done(function(response) {
-                   console.log(response); // if you're into that sorta thing
-                 });
+                }).done(function(response){
+                    console.log(response); 
+                });
             }
             return false;
         });

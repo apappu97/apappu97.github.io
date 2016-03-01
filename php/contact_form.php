@@ -1,4 +1,4 @@
-// <?php 
+ <?php 
 // 	$emailTo = "apappu@stanford.edu"; // Enter your email for feedbacks here 	
 // 	$name = $_POST['name'];
 // 	$email = $_POST['email'];
