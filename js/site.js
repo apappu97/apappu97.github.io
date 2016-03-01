@@ -1094,8 +1094,6 @@
 
         /** Contact Form */
         $('.contact-submit').click(function (e) {
-            console.log($('.contact-submit'))
-            console.log("click event entered");
             ripple($(this).parent(), e.pageX, e.pageY);
             var errors;
             var contact_form = $(this).closest('.contactForm');
@@ -1124,14 +1122,6 @@
 
  
             if (!errors) {
-                console.log("entering script to send emails");
-                //run php script to send email
-                // $.post("php/contact_form.php",
-                //     contact_form.serialize(),
-                //     function (response) {
-                //         contact_form_response.html(response);
-                //     }
-                // );
                 $.ajax({
                     type: "POST",
                     url: "https://mandrillapp.com/api/1.0/messages/send.json",
@@ -1147,12 +1137,12 @@
                             }
                             ],
                             'autotext': 'true',
-                            'subject': 'Website: Contact me form submission',
-                            'html': name + email + message 
+                            'subject': 'Personal Website: Contact me form submission at aneeshpappu.com',
+                            'html': '<p> Name: ' + name.val() + '</p><p> Email: ' + email.val()+ '</p><p> Message: ' + message.val() + '</p>'
                         }
                     }
                 }).done(function(response){
-                    console.log(response); 
+                    //console.log(response); 
                 });
             }
             return false;
