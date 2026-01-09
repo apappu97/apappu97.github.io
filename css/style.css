@@ -1,0 +1,358 @@
+/* Personal Website Stylesheet - Aneesh Pappu */
+
+/* ==================== CSS Variables ==================== */
+:root {
+  --color-bg: #faf9f6;
+  --color-text: #1a1a1a;
+  --color-text-secondary: #555555;
+  --color-accent: #8b5a2b;
+  --color-accent-hover: #6d4522;
+  --color-border: #e0ddd8;
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Work Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --max-width: 900px;
+  --spacing-unit: 1rem;
+}
+
+/* ==================== Reset & Base ==================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ==================== Typography ==================== */
+h1, h2, h3 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 3.5rem;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  color: var(--color-text);
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
+}
+
+/* ==================== Layout ==================== */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+section {
+  padding: 4rem 0;
+}
+
+section + section {
+  border-top: 1px solid var(--color-border);
+}
+
+/* ==================== Header ==================== */
+header {
+  padding: 3rem 0 2rem;
+  text-align: center;
+}
+
+.site-title {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: var(--color-text);
+  margin-bottom: 0.25rem;
+}
+
+.site-tagline {
+  font-size: 1.1rem;
+  color: var(--color-text-secondary);
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+}
+
+/* ==================== Navigation ==================== */
+nav {
+  margin-top: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--color-text-secondary);
+  font-size: 0.95rem;
+  font-weight: 400;
+  text-transform: lowercase;
+  letter-spacing: 0.03em;
+}
+
+nav a:hover {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+/* ==================== About Section ==================== */
+.about-content {
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.headshot {
+  flex-shrink: 0;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--color-border);
+}
+
+.bio {
+  flex: 1;
+}
+
+.bio p {
+  font-size: 1rem;
+  color: var(--color-text);
+}
+
+/* Social Icons */
+.social-links {
+  display: flex;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-text-secondary);
+  font-size: 0.9rem;
+}
+
+.social-links a:hover {
+  color: var(--color-accent);
+}
+
+.social-links svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* ==================== News Section ==================== */
+.news-list {
+  list-style: none;
+}
+
+.news-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.news-item:last-child {
+  border-bottom: none;
+}
+
+.news-date {
+  flex-shrink: 0;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+  min-width: 80px;
+}
+
+.news-text {
+  color: var(--color-text);
+}
+
+/* ==================== Publications Section ==================== */
+.pub-subsection {
+  margin-bottom: 2.5rem;
+}
+
+.pub-subsection:last-child {
+  margin-bottom: 0;
+}
+
+.pub-subsection h3 {
+  font-size: 1.25rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+  font-weight: 500;
+  font-family: var(--font-body);
+}
+
+.pub-list {
+  list-style: none;
+}
+
+.pub-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pub-item:last-child {
+  border-bottom: none;
+}
+
+.pub-title {
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: 0.25rem;
+}
+
+.pub-title a {
+  color: var(--color-text);
+}
+
+.pub-title a:hover {
+  color: var(--color-accent);
+}
+
+.pub-authors {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.pub-authors strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.pub-venue {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+/* ==================== Footer ==================== */
+footer {
+  padding: 3rem 0;
+  text-align: center;
+  border-top: 1px solid var(--color-border);
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.footer-social a {
+  color: var(--color-text-secondary);
+}
+
+.footer-social a:hover {
+  color: var(--color-accent);
+}
+
+.footer-social svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}
+
+.copyright {
+  font-size: 0.85rem;
+  color: var(--color-text-secondary);
+}
+
+/* ==================== Responsive ==================== */
+@media (max-width: 768px) {
+  .site-title {
+    font-size: 2.5rem;
+  }
+
+  nav ul {
+    gap: 1.25rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .headshot {
+    width: 180px;
+    height: 180px;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .news-item {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  section {
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .site-title {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+}
