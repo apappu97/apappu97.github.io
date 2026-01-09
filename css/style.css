@@ -140,8 +140,8 @@ nav a:hover {
 
 .headshot {
   flex-shrink: 0;
-  width: 220px;
-  height: 220px;
+  width: 380px;
+  height: 380px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--color-border);
@@ -320,8 +320,8 @@ footer {
   }
 
   .headshot {
-    width: 180px;
-    height: 180px;
+    width: 300px;
+    height: 300px;
   }
 
   .social-links {
