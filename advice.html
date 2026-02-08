@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Advice | Aneesh Pappu</title>
+  <meta name="description" content="Advice on pursuing work in machine learning">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <h1 class="site-title"><a href="index.html">Aneesh Pappu</a></h1>
+      <p class="site-tagline">AI Research & Policy</p>
+      <nav>
+        <ul>
+          <li><a href="index.html#about">about</a></li>
+          <li><a href="index.html#publications">publications</a></li>
+          <li><a href="index.html#news">news</a></li>
+          <li><a href="advice.html">advice</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Advice Section -->
+  <section id="advice">
+    <div class="container">
+      <h2>Advice</h2>
+      <div class="advice-content">
+        <p>
+          After advising several undergraduate and graduate students on pursuing work in machine learning, I thought it would be useful to share my thoughts publicly. Of course, your mileage may vary, and I am not an expert by any means, so take these notes with a grain of salt :)
+        </p>
+        <p>
+          Academically, I have found the most important foundations to be <strong>linear algebra</strong>, <strong>probability</strong>, and <strong>optimization</strong>.
+        </p>
+        <p>
+          <strong>Linear algebra</strong> is not only the primary language of data analysis, neural networks, etc., but also helps build intuitions for understanding how objects can be decomposed into combinations of simpler parts (e.g. basis decompositions, eigenvalue decompositions, SVD, etc.). There are many times in AI research where the idea of decomposing a phenomenon into a combination of simpler, atomic parts is useful. Linear algebra is often the language for doing this.
+        </p>
+        <p>
+          <strong>Probability</strong> is foundational because all modern machine learning relies on the idea of using models to approximate probability distributions over data of interest (e.g. internet text and human preferences via a language model, images via diffusion model, etc.).
+        </p>
+        <p>
+          <strong>Optimization</strong> is not only the methodology for training all modern ML systems, but more broadly is the language for modeling and solving many problems across the sciences and engineering, independent of machine learning. For machine learning research, all modern neural nets induce non-convex loss landscapes (in their original formulation, caveating for <a href="https://stanford.edu/~pilanci/">Mert Pilanci's</a> work on convex reformulations of neural networks). However, many present-day optimizers can be interpreted as approximating convex optimization methods for which we have well-established theory (e.g., Adam and Adagrad can be interpreted as approximating second-order methods like Newton's method that use curvature information to speed up convergence).
+        </p>
+        <p>
+          Finally, as ML models grow larger, <strong>parallel computation</strong> is the necessary backbone for making training and inference feasible. Familiarity with the basics of GPUs, tensor sharding, multithreading, etc., can go a long way.
+        </p>
+        <p>
+          To these ends, the most important classes I've taken at Stanford have been:
+        </p>
+        <ul class="course-list">
+          <li>EE263</li>
+          <li>EE278</li>
+          <li>EE364A</li>
+          <li>CS149</li>
+          <li>EE276</li>
+          <li>CS229</li>
+          <li>CS238</li>
+          <li>CS228</li>
+          <li>CS224N</li>
+          <li>CS231N</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p class="copyright">&copy; <script>document.write(new Date().getFullYear())</script> Aneesh Pappu</p>
+    </div>
+  </footer>
+
+</body>
+</html>
