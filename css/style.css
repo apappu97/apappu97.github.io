@@ -225,6 +225,14 @@ nav a:hover {
   display: none;
 }
 
+.news-more summary::before {
+  content: "Show earlier news";
+}
+
+.news-more[open] summary::before {
+  content: "Show less";
+}
+
 .news-more summary::after {
   content: " \2193";
   display: inline-block;
@@ -240,16 +248,16 @@ nav a:hover {
   color: var(--color-accent-hover);
 }
 
-.news-more .news-more-hide {
-  display: none;
-}
-
-.news-more[open] .news-more-show {
-  display: none;
-}
-
-.news-more[open] .news-more-hide {
-  display: inline;
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .news-more[open] > .news-list {
