@@ -209,6 +209,64 @@ nav a:hover {
   color: var(--color-text);
 }
 
+.news-more summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 1rem 0;
+  text-align: center;
+  color: var(--color-accent);
+  font-size: 0.9rem;
+  font-weight: 500;
+  user-select: none;
+  transition: color 0.2s ease;
+}
+
+.news-more summary::-webkit-details-marker {
+  display: none;
+}
+
+.news-more summary::after {
+  content: " \2193";
+  display: inline-block;
+  margin-left: 0.3rem;
+  transition: transform 0.2s ease;
+}
+
+.news-more[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.news-more summary:hover {
+  color: var(--color-accent-hover);
+}
+
+.news-more .news-more-hide {
+  display: none;
+}
+
+.news-more[open] .news-more-show {
+  display: none;
+}
+
+.news-more[open] .news-more-hide {
+  display: inline;
+}
+
+.news-more[open] > .news-list {
+  animation: news-fade-in 0.25s ease-out;
+}
+
+@keyframes news-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* ==================== Publications Section ==================== */
 .pub-subsection {
   margin-bottom: 2.5rem;
